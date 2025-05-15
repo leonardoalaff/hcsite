@@ -6,10 +6,11 @@
     margin: 0;
     padding: 0;
     background-color: #121212;
+    user-select: none;
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .menu {
@@ -19,6 +20,7 @@ body {
     position: fixed;
     z-index: 10;
     transition: 0.3s;
+    gap: 200px;
 }
 .menu:hover {
     width: 20%;
@@ -29,8 +31,8 @@ body {
     right: 37%;
 }
 .menu-icon {
-    width: 3vw;
-    height: 3vW;
+    width: 2vw;
+    height: 2vW;
     margin: auto;
     border-radius: 50%;
     position: relative;
@@ -43,7 +45,6 @@ body {
     transition: 0.3s;
 }
 .menu-icon:hover > .texto-menu {
-    transform: scale(1.1);
     transition: 0.3s;
 } 
 .menu-icon-perfil {
@@ -51,22 +52,88 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.menu-icon-add-sobra {
+    position: relative;
+    top: 10vh;
+    background: url('https://icons.veryicon.com/png/o/healthcate-medical/medical-icon-multi-color/plus-63.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .texto-menu {
     background-color: transparent;
-    font-size: 1.5em;
-    width: 100%;
+    font-weight: lighter;
+    font-size: 0.9em;
+    width: 500%;
     height: 100%;
     position: relative;
-    left: 200%;
+    left: 150%;
     color: #E0E0E0;
     display: none;
     align-items: center;
-    justify-content: center;
     transition: 0.3s;
 }
 .menu:hover > .menu-icon > .texto-menu {
     display: flex;
     transition: 0.3s;
+}
+
+.card-add-sobra {
+    position: fixed;
+    left: 22.5%;
+    top: 15vh;
+    width: 60%;
+    height: 70vh;
+    z-index: 20;
+    border-radius: 20px;
+    background-color: #E0E0E0;
+    padding: 50px;
+    display: none;
+    transition: 0.5s;
+}
+.fechar-card-sobra {
+    background: url('https://cdn-icons-png.flaticon.com/512/458/458594.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right: -100%;
+    top: -10%;
+    z-index: 20;
+    transition: 0.3s;
+}
+.fechar-card-sobra:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card-add-sobra.active {
+    display: block;
+    transition: 0.5s;
+}
+
+form, label, input {
+    background-color: transparent;
+}
+form {
+    height: 100%;
+    position: relative;
+    top: -10%;
+}
+label {
+    font-size: 1em;
+    margin-right: 5%;
+}
+input {
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 10px;
+    padding: 5px;
+}
+label, input {
+    margin-top: 5%;
 }
 
 header {
@@ -82,18 +149,20 @@ header {
 header h1 {
     margin-left: 10%;
     color: #E0E0E0;
+    /*text-decoration: underline 2px;
+    text-underline-offset: 5px;*/
 }
 
 .sessao1 {
-    width: 100%;
-    height: 20vh;
+    min-width: 100%;
+    height: 25vh;
     display: flex;
     align-items: center;
     position: relative;
     left: 10%;
 }
 
-.m-plano, .m-naoplano {
+.card-avisos {
     background-color: #1E1E1E;
     width: 20vw;
     height: 18vh;
@@ -101,7 +170,33 @@ header h1 {
     margin-top: 5vh;
     border-radius: 20px;
 }
-.m-plano {
+
+.sessao2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 15vh;
+    background-color: green;
 }
-.m-naoplano {
+
+.t-sobras {
+    width: 100%;
+    text-align: center;
+    color: #E0E0E0;
+    position: relative;
+    top: 10vh;
+    font-size: 2em;
+}
+.box-sobras {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sobras {
+    position: relative;
+    left: 2.5%;
+    width: 90%;
+    height: 100vh;
+    background-color: #1E1E1E;
+    border-radius: 20px;
 }
