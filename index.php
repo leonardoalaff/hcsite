@@ -21,7 +21,7 @@
     <div class="card-add-sobra"> 
     <div class="fechar-card-sobra"></div>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form class="form-card-sobra" action="" method="post" enctype="multipart/form-data">
 
     <label for="descricao">Descrição</label>
     <input type="text" name="descricao"><br>
@@ -161,7 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["remover_codigo"])) {
     file_put_contents($arquivo, json_encode($sobras, JSON_PRETTY_PRINT));
 
     echo "<div class='php-output'>";
-    echo "<h2>Sobra salva com sucesso:</h2>";
+    echo "<h2 style='backgound: transparent; color: green;'>Sobra salva com sucesso:</h2>";
     echo "<p>" . $sobra->adicionar() . "</p>";
     echo "</div>";
 }
@@ -197,17 +197,17 @@ $sobras_filtradas = filtrarSobras($sobras, $filtro_material, $filtro_espessura, 
 
 <!-- FORMULÁRIO DE FILTRO -->
 <form class="form-filtro" method="get" style="margin-bottom: 20px;">
-    <label for="codigo">Código:</label>
-    <input type="text" name="codigo" id="codigo" value="<?php echo htmlspecialchars($filtro_codigo); ?>">
+    <label style='font-size: 1.4em;' for="codigo">Código:</label>
+    <input style='border: 1px solid white; position: relative; left: -3%; color: white;' type="text" name="codigo" id="codigo" value="<?php echo htmlspecialchars($filtro_codigo); ?>">
 
-    <label for="material" style="margin-left:20px;">Material:</label>
-    <input type="text" name="material" id="material" value="<?php echo htmlspecialchars($filtro_material); ?>">
+    <label style='font-size: 1.4em;' for="material" style="margin-left:20px;">Material:</label>
+    <input style='border: 1px solid white; position: relative; left: -3%; color: white;' type="text" name="material" id="material" value="<?php echo htmlspecialchars($filtro_material); ?>">
 
-    <label for="espessura" style="margin-left:20px;">Espessura:</label>
-    <input type="number" name="espessura" id="espessura" value="<?php echo htmlspecialchars($filtro_espessura); ?>" step="any">
+    <label style='font-size: 1.4em;' for="espessura" style="margin-left:20px;">Espessura:</label>
+    <input style='border: 1px solid white; position: relative; left: -3%; color: white;' type="number" name="espessura" id="espessura" value="<?php echo htmlspecialchars($filtro_espessura); ?>" step="any">
 
-    <button type="submit" style="margin-left:20px;">Filtrar</button>
-    <a href="<?php echo $_SERVER['PHP_SELF']; ?>" style="margin-left:10px;">Limpar</a>
+    <button style='background: #1E90FF; color: white; border: none; padding: 7px; width: 10%; position: relative; top: 63%' type="submit" style="margin-left:20px;">FILTRAR</button>
+    <a href="<?php echo $_SERVER['PHP_SELF']; ?>" style="margin-left:10px; background: transparent; color: white; text-decoration: none; position: relative; top: 150%; left: -7%; font-size: 1.1em;">Limpar</a>
 </form>
 
 <?php
@@ -240,7 +240,7 @@ if (!empty($sobras_filtradas)) {
     }
     echo "</div>";
 } else {
-    echo "<p>Nenhuma sobra encontrada com os filtros aplicados.</p>";
+    echo "<p style='background: transparent; color: #E0E0E0; margin: 5%'>Nenhuma sobra encontrada com os filtros aplicados.</p>";
 }
 ?>
 

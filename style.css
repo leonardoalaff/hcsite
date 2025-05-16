@@ -81,15 +81,17 @@ body {
 .card-add-sobra {
     position: fixed;
     left: 22.5%;
-    top: 15vh;
     width: 60%;
-    height: 70vh;
+    height: 98vh;
     z-index: 20;
     border-radius: 20px;
     background-color: #E0E0E0;
     padding: 50px;
     display: none;
+    margin: 10px;
     transition: 0.5s;
+}
+.form-card-sobra {
 }
 .fechar-card-sobra {
     background: url('https://cdn-icons-png.flaticon.com/512/458/458594.png');
@@ -283,4 +285,8 @@ header h1 {
     background-color: #1E1E1E;
     border-radius: 20px;
     padding: 10px;
+}
+
+.sobra-nao-encontrada {
+    background-color: red;
 }
