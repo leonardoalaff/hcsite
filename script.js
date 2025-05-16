@@ -11,3 +11,38 @@ iconAddSobra.addEventListener('click', () => {
 
 fecharCardSobra.addEventListener('click', () => {
     cardAddSobra.classList.remove('active')} )
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const miniaturas = document.querySelectorAll(".miniatura");
+    const modal = document.getElementById("modal-imagem");
+    const imagemExpandida = document.getElementById("imagem-expandida");
+
+    miniaturas.forEach(function (img) {
+        img.addEventListener("click", function () {
+            imagemExpandida.src = img.dataset.img;
+            modal.style.display = "flex";
+        });
+    });
+
+    imagemExpandida.addEventListener("click", function () {
+        modal.style.display = "none";
+        imagemExpandida.src = "";
+    });
+});
+
+
+
+
+
+
+
+
+function abrirModal(src) {
+    const modal = document.getElementById('modal-imagem');
+    const imgExpandida = document.getElementById('imagem-expandida');
+    imgExpandida.src = src;
+    modal.style.display = 'flex';
+}

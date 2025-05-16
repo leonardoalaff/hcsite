@@ -136,6 +136,88 @@ label, input {
     margin-top: 5%;
 }
 
+.php-output {
+    color: #E0E0E0;
+}
+
+
+
+
+
+
+
+
+
+
+.modal-imagem {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-imagem img {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+
+
+
+.form-filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    position: relative;
+    top: -1vh;
+    color: #E0E0E0;
+    font-size: 0.6em;
+}
+
+.label-filtro-material {
+    position: relative;
+    top: -2vh;
+}
+
+.input-filtro-material {
+    position: relative;
+    top: -2vh;
+}
+
+
+.label-filtro-espessura {
+    position: relative;
+    top: -2vh;
+}
+
+.input-filtro-espessura {
+    position: relative;
+    top: -2vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 header {
     background-color: #121212;
     width: 90%;
@@ -194,9 +276,11 @@ header h1 {
 }
 .sobras {
     position: relative;
+    top: 5vh;
     left: 2.5%;
     width: 90%;
     height: 100vh;
     background-color: #1E1E1E;
     border-radius: 20px;
+    padding: 10px;
 }
