@@ -290,3 +290,11 @@ header h1 {
 .sobra-nao-encontrada {
     background-color: red;
 }
+
+.tipo-sobra {
+    background-color: red;
+}
+
+#tiposobra {
+    background-color: red;
+}

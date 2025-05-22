@@ -1,12 +1,35 @@
 [
     {
         "codigo": "0001",
+        "tiposobra": "irregular",
         "descricao": "CHAPA",
         "espessura": "8",
         "largura": "150",
         "comprimento": "400",
-        "imagem": "uploads\/1747914798_WhatsApp Image 2025-02-27 at 09.31.50.jpeg",
         "material": "A36",
-        "localizacao": "CNC"
+        "localizacao": "CNC",
+        "imagem": "uploads\/1747925635_WhatsApp Image 2025-02-27 at 09.31.50.jpeg"
+    },
+    {
+        "codigo": "0002",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "12",
+        "largura": "1500",
+        "comprimento": "4500",
+        "material": "A572",
+        "localizacao": "PÁTIO",
+        "imagem": "uploads\/1747926084_pexels-pixabay-355935.jpg"
+    },
+    {
+        "codigo": "0003",
+        "tiposobra": "irregular",
+        "descricao": "CHAPA",
+        "espessura": "25",
+        "largura": "600",
+        "comprimento": "750",
+        "material": "HARDOX 500",
+        "localizacao": "CNC",
+        "imagem": "uploads\/1747926134_New_iMac27_Wallpaper_FlareZephyr-iDownloadBlog-thumbnail.jpg"
     }
 ]
