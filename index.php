@@ -81,15 +81,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             <h1 class="texto-menu texto-menu-perfil">Perfil</h1>
             <div style='width: 200px; height: 200px; background: #1E1E1E; position: relative; z-index: 999;' class="card-perfis">
                 <div class='box-conta'>
-                    <h2>Detalhamento</h2>
+                    <h2 class="tipo-perfil">Detalhamento</h2>
                 </div>
 
                 <div class='box-conta'>
-                    <h2>Encarregado</h2>
+                    <h2 class="tipo-perfil2">Encarregado</h2>
                 </div>
 
                 <div class='box-conta'>
-                    <h2>Operador</h2>
+                    <h2 class="tipo-perfil3">Operador</h2>
                 </div>
             </div>
         </div>
@@ -134,6 +134,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
         </form>
     </div>
 
+
+    <div class="box-senha">
+        <form class="formulario-senha" action="">
+            <label class="titulo-senha" for="senha">Senha</label>
+            <input class="campo-senha" type="password">
+
+            <input class="botao-senha" type="button" value="Entrar">
+        </form>
+    </div>
+
+
     <header>
         <h1>Controle de sobras HC</h1>
     </header>
@@ -167,6 +178,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
         <img id="imagem-expandida" src="">
     </div>
 
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>

@@ -5,6 +5,10 @@ const fecharCardSobra = document.querySelector('.fechar-card-sobra')
 const cardPerfis = document.querySelector('.card-perfis')
 const menuIconAddSobra = document.querySelector('.menu-icon-add-sobra')
 const menuIconPerfil = document.querySelector('.menu-icon-perfil')
+const tipoPerfil = document.querySelector('.tipo-perfil')
+const tipoPerfil2 = document.querySelector('.tipo-perfil2')
+const tipoPerfil3 = document.querySelector('.tipo-perfil3')
+const boxSenha = document.querySelector('.box-senha')
 
 addSobra.addEventListener('click', () => {
     cardAddSobra.classList.toggle('active')} )
@@ -14,6 +18,18 @@ iconAddSobra.addEventListener('click', () => {
 
 fecharCardSobra.addEventListener('click', () => {
     cardAddSobra.classList.remove('active')} )
+
+    tipoPerfil.addEventListener('click', () => {
+        boxSenha.classList.toggle('active')
+    })
+
+    tipoPerfil2.addEventListener('click', () => {
+        boxSenha.classList.toggle('active')
+    })
+
+    tipoPerfil3.addEventListener('click', () => {
+        boxSenha.classList.toggle('active')
+    })
 
 
 
