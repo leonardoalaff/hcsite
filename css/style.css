@@ -1,7 +1,12 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -52,12 +57,50 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.card-perfis {
+    display: none;
+    position: relative;
+    left: 450%;
+    top: -7vh;
+    padding-top: 30px;
+    padding-left: 20px;
+    box-shadow: 0 0 10px black;
+    transition: 0.3s;
+}
+.box-conta {
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+.box-conta h2 {
+    background-color: transparent;
+    color: #E0E0E0;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.box-conta h2:hover {
+    text-decoration: underline 1px;
+    text-underline-offset: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.menu-icon-perfil:hover > .card-perfis {
+    display: block;
+    transition: 0.3s;
+}
+
+
+
 .menu-icon-add-sobra {
     position: relative;
     top: 10vh;
     background: url('https://icons.veryicon.com/png/o/healthcate-medical/medical-icon-multi-color/plus-63.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.menu-icon-add-sobra.active {
+    display: none;
 }
 
 .texto-menu {
@@ -78,6 +121,12 @@ body {
     transition: 0.3s;
 }
 
+.card-perfis {
+    width: 2000px;
+    height: 2000px;
+    background-color: red;
+}
+
 .card-add-sobra {
     position: fixed;
     left: 22.5%;
@@ -85,14 +134,12 @@ body {
     height: 98vh;
     z-index: 20;
     border-radius: 20px;
-    background-color: #E0E0E0;
     padding: 50px;
     display: none;
     margin: 10px;
     transition: 0.5s;
 }
-.form-card-sobra {
-}
+
 .fechar-card-sobra {
     background: url('https://cdn-icons-png.flaticon.com/512/458/458594.png');
     background-repeat: no-repeat;

@@ -2,6 +2,9 @@ const addSobra = document.querySelector('.texto-menu-add-sobra')
 const iconAddSobra = document.querySelector('.menu-icon-add-sobra')
 const cardAddSobra = document.querySelector('.card-add-sobra')
 const fecharCardSobra = document.querySelector('.fechar-card-sobra')
+const cardPerfis = document.querySelector('.card-perfis')
+const menuIconAddSobra = document.querySelector('.menu-icon-add-sobra')
+const menuIconPerfil = document.querySelector('.menu-icon-perfil')
 
 addSobra.addEventListener('click', () => {
     cardAddSobra.classList.toggle('active')} )

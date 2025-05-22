@@ -91,6 +91,6 @@ header('Content-Type: text/html; charset=utf-8');
             document.body.classList.toggle('no-scroll', img.classList.contains('expanded'));
         });
     });
-</script>
+</script> 
 </body>
 </html>

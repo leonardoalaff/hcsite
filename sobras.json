@@ -30,6 +30,7 @@
         "comprimento": "750",
         "material": "HARDOX 500",
         "localizacao": "CNC",
-        "imagem": "uploads\/1747926134_New_iMac27_Wallpaper_FlareZephyr-iDownloadBlog-thumbnail.jpg"
+        "imagem": "uploads\/1747926134_New_iMac27_Wallpaper_FlareZephyr-iDownloadBlog-thumbnail.jpg",
+        "oculta": true
     }
 ]

@@ -72,13 +72,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="menu">
         <div class="menu-icon menu-icon-perfil">
             <h1 class="texto-menu texto-menu-perfil">Perfil</h1>
+            <div style='width: 200px; height: 200px; background: #1E1E1E; position: relative; z-index: 999;' class="card-perfis">
+                <div class='box-conta'>
+                    <h2>Detalhamento</h2>
+                </div>
+
+                <div class='box-conta'>
+                    <h2>Encarregado</h2>
+                </div>
+
+                <div class='box-conta'>
+                    <h2>Operador</h2>
+                </div>
+            </div>
         </div>
 
         <div class="menu-icon menu-icon-add-sobra">
@@ -86,38 +99,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
         </div>
     </div>
 
-    <div class="card-add-sobra"> 
+    <div style='background: #007fc7; justify-content:center; align-items: center;' class="card-add-sobra"> 
         <div class="fechar-card-sobra"></div>
 
-        <form class="form-card-sobra" action="" method="post" enctype="multipart/form-data">
+        <form style='position:relative; top: 0; width: 90%; height: 73.5%;' class="form-card-sobra" action="" method="post" enctype="multipart/form-data">
 
-        <select name="tiposobra" id="tiposobra" style="background: #00BFFF; color: white; padding: 5px; border-radius: 10px; border: none; width: 40%">
-            <option value="sobraregular">Sobra regular</option>
-            <option value="irregular">Sobra irregular</option>  
+        <select name="tiposobra" id="tiposobra" style="background: white; color: #1E1E1E; padding: 5px; border-radius: 10px; border: none; width: 40%">
+            <option style="background: white; color: #1E1E1E;" value="sobraregular">Sobra regular</option>
+            <option style="background: white; color: #1E1E1E;" value="irregular">Sobra irregular</option>  
         </select> <br>
 
-            <label for="descricao">Descrição</label>
-            <input type="text" name="descricao"><br>
+            <label style='color: white;' for="descricao">Descrição</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="text" name="descricao"><br>
 
-            <label for="espessura">Espessura</label>
-            <input type="number" name="espessura"><br>
+            <label style='color: white' for="espessura">Espessura</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="number" name="espessura"><br>
 
-            <label for="largura">Largura</label>
-            <input type="number" name="largura"><br>
+            <label style='color: white' for="largura">Largura</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="number" name="largura"><br>
 
-            <label for="comprimento">Comprimento</label>
-            <input type="number" name="comprimento"><br>
+            <label style='color: white' for="comprimento">Comprimento</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="number" name="comprimento"><br>
 
-            <label for="material">Material</label>
-            <input type="text" name="material"><br>
+            <label style='color: white' for="material">Material</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="text" name="material"><br>
 
-            <label for="localizacao">Localização</label>
-            <input type="text" name="localizacao"><br>
+            <label style='color: white' for="localizacao">Localização</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="text" name="localizacao"><br>
 
-            <label for="imagem">Adicionar arquivo</label>
-            <input type="file" name="imagem"><br>
+            <label style='color: white' for="imagem">Adicionar arquivo</label>
+            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="file" name="imagem"><br>
 
-            <input type="submit" value="Adicionar sobra">
+            <input style='background: white; border: none; position: relative;; width: 40%' type="submit" value="Adicionar sobra">
         </form>
     </div>
 
