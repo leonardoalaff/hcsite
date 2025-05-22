@@ -77,14 +77,14 @@ body {
     color: #E0E0E0;
     font-weight: lighter;
     font-size: 20px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .box-conta h2:hover {
     text-decoration: underline 1px;
     text-underline-offset: 10px;
     font-weight: bolder;
     font-size: 20px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .menu-icon-perfil:hover > .card-perfis {
