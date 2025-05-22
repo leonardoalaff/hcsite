@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "codigo": "0001",
+        "descricao": "",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "imagem": "",
+        "material": "",
+        "localizacao": ""
+    }
+]

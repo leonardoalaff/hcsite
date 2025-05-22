@@ -110,6 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["remover_codigo"])) {
         return $sobra["codigo"] !== $codigo_para_remover;
     });
     file_put_contents($arquivo, json_encode(array_values($sobras), JSON_PRETTY_PRINT));
+
+    // 🔄 Recarrega o JSON atualizado para refletir a remoção
+    $sobras = json_decode(file_get_contents($arquivo), true) ?? [];
+
     header("Location: " . $_SERVER["PHP_SELF"]);
     exit;
 }
@@ -141,8 +145,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST["remover_codigo"])) {
         }
     }
 
-    // Gera código sequencial
-    $proximo_codigo = str_pad(count($sobras) + 1, 4, "0", STR_PAD_LEFT);
+   // Gera próximo código único baseado no maior código existente (mesmo após remoções)
+$maior_codigo = 0;
+
+foreach ($sobras as $sobra_existente) {
+    // Remove os zeros à esquerda antes de converter para número
+    $codigo_int = intval(ltrim($sobra_existente["codigo"], "0"));
+    if ($codigo_int > $maior_codigo) {
+        $maior_codigo = $codigo_int;
+    }
+}
+
+$proximo_codigo = str_pad($maior_codigo + 1, 4, "0", STR_PAD_LEFT);
 
     $sobra = new Sobra($proximo_codigo, $descricao, $espessura, $largura, $comprimento, $imagem, $material, $localizacao);
 
