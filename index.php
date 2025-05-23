@@ -106,40 +106,58 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     </div>
 
-    <div style='background: #007fc7; justify-content:center; align-items: center;' class="card-add-sobra"> 
-        <div class="fechar-card-sobra"></div>
+    <div class="card-add-sobra">
+  <div class="fechar-card-sobra"></div>
 
-        <form style='position:relative; top: 0; width: 90%; height: 73.5%;' class="form-card-sobra" action="" method="post" enctype="multipart/form-data">
-
-        <select name="tiposobra" id="tiposobra" style="background: white; color: #1E1E1E; padding: 5px; border-radius: 10px; border: none; width: 40%">
-            <option style="background: white; color: #1E1E1E;" value="sobraregular">Sobra regular</option>
-            <option style="background: white; color: #1E1E1E;" value="irregular">Sobra irregular</option>  
-        </select> <br>
-
-            <label style='color: white;' for="descricao">Descrição</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="text" name="descricao"><br>
-
-            <label style='color: white' for="espessura">Espessura</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="number" name="espessura"><br>
-
-            <label style='color: white' for="largura">Largura</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="number" name="largura"><br>
-
-            <label style='color: white' for="comprimento">Comprimento</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="number" name="comprimento"><br>
-
-            <label style='color: white' for="material">Material</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="text" name="material"><br>
-
-            <label style='color: white' for="localizacao">Localização</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="text" name="localizacao"><br>
-
-            <label style='color: white' for="imagem">Adicionar arquivo</label>
-            <input style='color: white; outline: none; border: 1px solid white; width: 40%' type="file" name="imagem"><br>
-
-            <input style='background: white; border: none; position: relative;; width: 40%' type="submit" value="Adicionar sobra">
-        </form>
+  <form class="form-card-sobra" method="post" enctype="multipart/form-data">
+    
+    <div class="form-group">
+      <label for="tiposobra">Tipo de sobra</label>
+      <select name="tiposobra" id="tiposobra">
+        <option value="sobraregular">Sobra regular</option>
+        <option value="irregular">Sobra irregular</option>
+      </select>
     </div>
+
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <input type="text" name="descricao">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="espessura">Espessura</label>
+        <input type="number" name="espessura">
+      </div>
+      <div class="form-group">
+        <label for="largura">Largura</label>
+        <input type="number" name="largura">
+      </div>
+      <div class="form-group">
+        <label for="comprimento">Comprimento</label>
+        <input type="number" name="comprimento">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="material">Material</label>
+        <input type="text" name="material">
+      </div>
+      <div class="form-group">
+        <label for="localizacao">Localização</label>
+        <input type="text" name="localizacao">
+      </div>
+    </div>
+
+    <div class="form-group img">
+      <label for="imagem">Adicionar arquivo</label>
+      <input class="escolher-arquivo" type="file" name="imagem">
+    </div>
+
+    <input type="submit" value="Adicionar sobra">
+  </form>
+</div>
 
 
     <div class="box-senha">

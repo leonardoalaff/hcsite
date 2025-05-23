@@ -186,7 +186,7 @@ body {
 .card-add-sobra {
     position: fixed;
     left: 22.5%;
-    width: 60%;
+    width: 80%;
     height: 98vh;
     z-index: 20;
     border-radius: 20px;
@@ -217,6 +217,9 @@ body {
 .card-add-sobra.active {
     display: block;
     transition: 0.5s;
+}
+
+.form-card-sobra {
 }
 
 form, label, input {
@@ -395,9 +398,106 @@ header h1 {
 }
 
 .tipo-sobra {
-    background-color: red;
 }
 
 #tiposobra {
-    background-color: red;
 }
+
+
+
+
+
+
+
+.card-add-sobra {
+    background: #1E1E1E;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    width: 60%;
+    height: 90vh;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .form-card-sobra {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .form-card-sobra label {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+    background-color: transparent;
+  }
+
+  .form-card-sobra input,
+  .form-card-sobra select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .form-card-sobra select {
+    background: white;
+    color: #1E1E1E;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: transparent;
+  }
+
+  .form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+    background-color: transparent;
+  }
+
+  .form-card-sobra input[type="file"] {
+    background: white;
+    color: #1E1E1E;
+  }
+
+  .form-card-sobra input[type="submit"] {
+    background: white;
+    color: #1E1E1E;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: fit-content;
+    padding: 10px 20px;
+    align-self: flex-start;
+    border: none;
+  }
+
+  .form-card-sobra input[type="submit"]:hover {
+    background: #ccc;
+  }
+
+
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+    }
+
+    .form-card-sobra input[type="submit"] {
+      width: 100%;
+    }
+  }
