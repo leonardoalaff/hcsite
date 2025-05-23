@@ -95,6 +95,7 @@ body {
 
 
 .box-senha {
+    background-color: #121212;
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -117,6 +118,9 @@ body {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.767);
     color: #ccc;
     border-radius: 10px;
+    position: relative;
+    left: 25%;
+    top: 20%;
 }
 .titulo-senha {
     color: #ccc;
@@ -137,6 +141,9 @@ body {
     transform: scale(1.2);
     transition: 0.2s;
     cursor: pointer;
+}
+.botao-senha.active {
+    display: none;
 }
 
 

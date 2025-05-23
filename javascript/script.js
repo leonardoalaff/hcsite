@@ -1,40 +1,53 @@
-const addSobra = document.querySelector('.texto-menu-add-sobra')
-const iconAddSobra = document.querySelector('.menu-icon-add-sobra')
-const cardAddSobra = document.querySelector('.card-add-sobra')
-const fecharCardSobra = document.querySelector('.fechar-card-sobra')
-const cardPerfis = document.querySelector('.card-perfis')
-const menuIconAddSobra = document.querySelector('.menu-icon-add-sobra')
-const menuIconPerfil = document.querySelector('.menu-icon-perfil')
-const tipoPerfil = document.querySelector('.tipo-perfil')
-const tipoPerfil2 = document.querySelector('.tipo-perfil2')
-const tipoPerfil3 = document.querySelector('.tipo-perfil3')
-const boxSenha = document.querySelector('.box-senha')
+document.addEventListener("DOMContentLoaded", function () {
+    const addSobra = document.querySelector('.texto-menu-add-sobra');
+    const iconAddSobra = document.querySelector('.menu-icon-add-sobra');
+    const cardAddSobra = document.querySelector('.card-add-sobra');
+    const fecharCardSobra = document.querySelector('.fechar-card-sobra');
+    const cardPerfis = document.querySelector('.card-perfis');
+    const menuIconAddSobra = document.querySelector('.menu-icon-add-sobra');
+    const menuIconPerfil = document.querySelector('.menu-icon-perfil');
+    const tipoPerfil = document.querySelector('.tipo-perfil');
+    const tipoPerfil2 = document.querySelector('.tipo-perfil2');
+    const tipoPerfil3 = document.querySelector('.tipo-perfil3');
+    const boxSenha = document.querySelector('.box-senha');
+    const btnEntrar = document.querySelector('#btnEntrar'); // Adicione o ID no botão no HTML
+    const campoSenha = document.querySelector('#campoSenha'); // Adicione o ID no campo de senha
+    let perfilSelecionado = null;
 
-addSobra.addEventListener('click', () => {
-    cardAddSobra.classList.toggle('active')} )
-
-iconAddSobra.addEventListener('click', () => {
-    cardAddSobra.classList.add('active')} )
-
-fecharCardSobra.addEventListener('click', () => {
-    cardAddSobra.classList.remove('active')} )
-
+    // Perfil selecionado
     tipoPerfil.addEventListener('click', () => {
-        boxSenha.classList.toggle('active')
-    })
+        perfilSelecionado = "detalhamento";
+        document.getElementById("perfil_escolhido").value = perfilSelecionado;
+        boxSenha.style.display = "block";
+    });
 
     tipoPerfil2.addEventListener('click', () => {
-        boxSenha.classList.toggle('active')
-    })
+        perfilSelecionado = "encarregado";
+        document.getElementById("perfil_escolhido").value = perfilSelecionado;
+        boxSenha.style.display = "block";
+    });
 
     tipoPerfil3.addEventListener('click', () => {
-        boxSenha.classList.toggle('active')
-    })
+        perfilSelecionado = "operador";
+        document.getElementById("perfil_escolhido").value = perfilSelecionado;
+        boxSenha.style.display = "block";
+    });
 
+  
+    // Ações de exibir/esconder card de sobra
+    addSobra.addEventListener('click', () => {
+        cardAddSobra.classList.toggle('active');
+    });
 
+    iconAddSobra.addEventListener('click', () => {
+        cardAddSobra.classList.add('active');
+    });
 
+    fecharCardSobra.addEventListener('click', () => {
+        cardAddSobra.classList.remove('active');
+    });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    // Miniaturas de imagem
     const miniaturas = document.querySelectorAll(".miniatura");
     const modal = document.getElementById("modal-imagem");
     const imagemExpandida = document.getElementById("imagem-expandida");
@@ -52,13 +65,7 @@ fecharCardSobra.addEventListener('click', () => {
     });
 });
 
-
-
-
-
-
-
-
+// Função global caso precise ser chamada diretamente
 function abrirModal(src) {
     const modal = document.getElementById('modal-imagem');
     const imgExpandida = document.getElementById('imagem-expandida');

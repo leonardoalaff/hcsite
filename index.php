@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 $arquivo = "sobras.json";
 
 // Lê as sobras existentes (ou cria uma lista vazia)
@@ -94,9 +96,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             </div>
         </div>
 
-        <div class="menu-icon menu-icon-add-sobra">
-            <h1 class="texto-menu texto-menu-add-sobra">Add Sobra</h1>
-        </div>
+        <?php
+        $perfil = $_SESSION['perfil'] ?? 'visitante';
+        if ($perfil === 'detalhamento' || $perfil === 'encarregado'): ?>
+            <div class="menu-icon menu-icon-add-sobra">
+                <h1 class="texto-menu texto-menu-add-sobra">Add Sobra</h1>
+            </div>
+        <?php endif; ?>
+
     </div>
 
     <div style='background: #007fc7; justify-content:center; align-items: center;' class="card-add-sobra"> 
@@ -136,13 +143,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
 
     <div class="box-senha">
-        <form class="formulario-senha" action="">
-            <label class="titulo-senha" for="senha">Senha</label>
-            <input class="campo-senha" type="password">
-
-            <input class="botao-senha" type="button" value="Entrar">
-        </form>
-    </div>
+    <form class="formulario-senha" action="login.php" method="POST">
+        <input type="hidden" name="perfil" id="perfil_escolhido" value="">
+        <label class="titulo-senha" for="senha">Senha</label>
+        <input class="campo-senha" id="campoSenha" type="password" name="senha">
+        <input class="botao-senha" id="btnEntrar" type="submit" value="Entrar">
+    </form>
+</div>
 
 
     <header>
@@ -167,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             <label style='font-size: 1.4em; margin-right: 1%' for="espessura">Espessura:</label>
             <input style='border: 1px solid white; color: white; margin-right: 5%' type="number" name="espessura" id="espessura" step="any">
 
-            <button style='background: #1E90FF; color: white; border: none; padding: 7px; width: 10%; position: relative; top: 75%; border-radius: 10px' type="submit">FILTRAR</button>
+            <button style='background: #1E90FF; color: white; border: none; padding: 7px; width: 10%; position: relative; top: 75%; border-radius: 10px' type="submit">SOBRAS</button>
         </form>
     </main>
 

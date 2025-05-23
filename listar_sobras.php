@@ -1,4 +1,5 @@
 <?php
+session_start();
 $arquivo = "sobras.json";
 
 // Lê as sobras do arquivo
@@ -50,7 +51,7 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css2/estilo.css">
 </head>
 <body>
     <h2>Sobras Encontradas:</h2>
@@ -72,10 +73,16 @@ header('Content-Type: text/html; charset=utf-8');
 
                 <?php endif; ?>
 
-                <form method="POST" style="margin-top:10px;">
-                    <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
-                    <button type="submit" class="remover-btn">Remover sobra</button>
-                </form>
+                <?php
+$perfil = $_SESSION['perfil'] ?? 'visitante';
+if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
+?>
+    <form method="POST" style="margin-top:10px;">
+        <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
+        <button type="submit" class="remover-btn">Remover sobra</button>
+    </form>
+<?php endif; ?>
+
             </div>
         <?php endforeach; ?>
     <?php else: ?>
