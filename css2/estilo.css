@@ -32,6 +32,7 @@ h2 {
 .sobra-card:hover {
     box-shadow: 10px 10px 15px black;
     transform: scale(1.06);
+    cursor: pointer;
     transition: 0.2s;
 }
 

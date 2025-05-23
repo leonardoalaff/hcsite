@@ -13,6 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnEntrar = document.querySelector('#btnEntrar'); // Adicione o ID no botão no HTML
     const campoSenha = document.querySelector('#campoSenha'); // Adicione o ID no campo de senha
     let perfilSelecionado = null;
+    const abrirMenu = document.querySelector('.abrir-menu');
+    const linhaMenu = document.querySelector('.linha-menu');
+    const linhaMenu2 = document.querySelector('.linha-menu2');
+    const menu = document.querySelector('.menu');
+
+    abrirMenu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+})
 
     // Perfil selecionado
     tipoPerfil.addEventListener('click', () => {
