@@ -19,7 +19,8 @@
         "comprimento": "4500",
         "material": "A572",
         "localizacao": "PÁTIO",
-        "imagem": "uploads\/1747926084_pexels-pixabay-355935.jpg"
+        "imagem": "uploads\/1747926084_pexels-pixabay-355935.jpg",
+        "oculta": true
     },
     {
         "codigo": "0003",
