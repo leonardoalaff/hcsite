@@ -349,17 +349,17 @@ header h1 {
 }
 
 .sessao1 {
-    min-width: 100%;
+    width: 100%;
     height: 25vh;
     display: flex;
     align-items: center;
     position: relative;
-    left: 10%;
+    overflow-x: auto;
 }
 
 .card-avisos {
     background-color: #1E1E1E;
-    width: 20vw;
+    min-width: 20vw;
     height: 18vh;
     margin-left: 5%;
     margin-top: 5vh;

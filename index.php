@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
-<body>
+<body class="corpo">
 
     <div class="menu">
         <div class="menu-icon menu-icon-perfil">
@@ -185,17 +185,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
         </section>
 
         <!-- FORMULÁRIO DE FILTRO -->
-        <form class="form-filtro" method="get" action="listar_sobras.php" style="margin: 40px 0;">
+         <div class="box-filtro">
+          <form class="form-filtro" method="get" action="listar_sobras.php" style="margin: 40px 0;">
+
             <label style='font-size: 1.4em; margin-right: 1%' for="codigo">Código:</label>
-            <input style='border: 1px solid white; color: white; margin-right: 5%' type="text" name="codigo" id="codigo">
+            <input style='border: 1px solid white; color: white; margin-right: 5%; width: 30%' type="text" name="codigo" id="codigo">
+            
             <label style='font-size: 1.4em; margin-right: 1%' for="material">Material:</label>
-            <input style='border: 1px solid white; color: white; margin-right: 5%' type="text" name="material" id="material">
+            <input style='border: 1px solid white; color: white; margin-right: 5%; width: 30%' type="text" name="material" id="material">
 
             <label style='font-size: 1.4em; margin-right: 1%' for="espessura">Espessura:</label>
-            <input style='border: 1px solid white; color: white; margin-right: 5%' type="number" name="espessura" id="espessura" step="any">
+            <input style='border: 1px solid white; color: white; margin-right: 5%; width: 30%' type="number" name="espessura" id="espessura" step="any">
 
-            <button style='background: #1E90FF; color: white; border: none; padding: 7px; width: 10%; position: relative; top: 75%; border-radius: 10px' type="submit">SOBRAS</button>
+            <button class="btn-sobras" style='background: #1E90FF; color: white; border: none; padding: 7px; position: relative; border-radius: 10px' type="submit">SOBRAS</button>
         </form>
+         </div>
+        
     </main>
 
     <footer></footer>

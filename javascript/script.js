@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle('active');
 })
 
+    menuIconPerfil.addEventListener('click', () => {
+        cardPerfis.classList.toggle('active')
+    })
+
     // Perfil selecionado
     tipoPerfil.addEventListener('click', () => {
         perfilSelecionado = "detalhamento";

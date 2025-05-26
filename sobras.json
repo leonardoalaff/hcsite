@@ -1,7 +1,6 @@
 [
     {
         "codigo": "0001",
-<<<<<<< Updated upstream
         "tiposobra": "irregular",
         "descricao": "CHAPA",
         "espessura": "8",
@@ -473,7 +472,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0044",
@@ -517,7 +517,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0048",
@@ -605,7 +606,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0056",
@@ -1353,7 +1355,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0124",
@@ -3048,25 +3051,5 @@
         "material": "",
         "localizacao": "",
         "imagem": ""
-    },
-    {
-        "codigo": "0278",
-        "tiposobra": "sobraregular",
-        "descricao": "",
-        "espessura": "",
-        "largura": "",
-        "comprimento": "",
-        "material": "",
-        "localizacao": "",
-        "imagem": ""
-=======
-        "descricao": "CHAPA",
-        "espessura": "8",
-        "largura": "200",
-        "comprimento": "500",
-        "imagem": "uploads\/1747366294_wallpaperflare.com_wallpaper (2).jpg",
-        "material": "A36",
-        "localizacao": "CNC"
->>>>>>> Stashed changes
     }
 ]
