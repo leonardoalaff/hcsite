@@ -11,16 +11,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #121212;
     user-select: none;
 }
+
+body {
+    background-color: #f7f9fa;
+}
+
 
 .sessao1::-webkit-scrollbar {
   display: none;
 }
 
 .menu {
-    background-color: #1E1E1E;
     width: 60%;
     height: 100vh;
     position: fixed;
@@ -255,7 +258,7 @@ main {
     align-items: baseline;
 }
 .form-filtro {
-    display: flex;
+    display: block;
     padding: 10px;
     width: 100%;
     align-items: center;
@@ -263,7 +266,7 @@ main {
     height: 30vh;
     position: relative;
     top: -1vh;
-    color: #E0E0E0;
+    color: #1c1c1c;
     font-size: 0.4em;
 }
 
@@ -288,9 +291,10 @@ main {
     top: -2vh;
 }
 .btn-sobras {
+    background-color: #003f5c;
     top: 3%;
     width: 100%;
-    left: 0;
+    left: -1.5%;
 }
 
 
@@ -305,7 +309,7 @@ header {
     padding: 20px;
 }
 header h1 {
-    color: #E0E0E0;
+    color: #1c1c1c;
     font-size: 1.3em;
     font-weight: bolder;
 }
@@ -328,7 +332,7 @@ header h1 {
 }
 
 .card-avisos {
-    background-color: #1E1E1E;
+    background-color: #003f5c;
     min-width: 30vw;
     height: 18vh;
     margin-left: 5%;
