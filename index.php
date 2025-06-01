@@ -210,6 +210,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
         <img id="imagem-expandida" src="">
     </div>
 
+
+
+    <script>
+    document.querySelectorAll('.reservar-toggle-btn').forEach(botao => {
+        botao.addEventListener('click', () => {
+            const codigo = botao.dataset.codigo;
+            const form = document.getElementById('form-' + codigo);
+            if (form) {
+                form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+            }
+        });
+    });
+</script>
+
     <script src="javascript/script.js"></script>
 </body>
 </html>

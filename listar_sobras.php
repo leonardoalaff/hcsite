@@ -74,7 +74,22 @@ header('Content-Type: text/html; charset=utf-8');
 
                 <?php endif; ?>
 
+                <?php if (!empty($sobra['reservada'])): ?>
+    <p class="sobra-reservada">Reservada por: <strong><?=   htmlspecialchars($sobra['reservada_por']) ?></strong></p>
+    <?php endif; ?>
+
+
+
+    <?php if (!empty($sobra['reservada']) && !empty($sobra['codigo_projeto'])): ?>
+    <p class="sobra-reservada">Reservada para o projeto: <strong><?= htmlspecialchars($sobra['codigo_projeto']) ?></strong></p>
+<?php endif; ?>
+
+
                 <?php
+$perfil = $_SESSION['perfil'] ?? 'visitante';
+if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
+?>
+    <?php
 $perfil = $_SESSION['perfil'] ?? 'visitante';
 if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
 ?>
@@ -82,6 +97,18 @@ if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
         <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
         <button type="submit" class="remover-btn">Remover sobra</button>
     </form>
+
+    <!-- Botão de reservar -->
+    <button type="button" class="reservar-toggle-btn" data-codigo="<?= htmlspecialchars($sobra["codigo"]) ?>">Reservar sobra</button>
+
+    <!-- Formulário de reserva -->
+    <form method="POST" action="reservar_sobra.php" class="form-reserva" id="form-<?= htmlspecialchars($sobra["codigo"]) ?>" style="display:none; margin-top:5px;">
+        <input type="hidden" name="codigo_reserva" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
+        <input type="text" name="codigo_projeto" placeholder="Código do projeto" required>
+        <button type="submit" class="reservar-btn">Confirmar reserva</button>
+    </form>
+<?php endif; ?>
+
 <?php endif; ?>
 
             </div>
@@ -100,5 +127,18 @@ if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
         });
     });
 </script> 
+
+
+<script>
+    document.querySelectorAll('.reservar-toggle-btn').forEach(botao => {
+        botao.addEventListener('click', () => {
+            const codigo = botao.dataset.codigo;
+            const form = document.getElementById('form-' + codigo);
+            if (form) {
+                form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+            }
+        });
+    });
+</script>
 </body>
 </html>

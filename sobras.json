@@ -1,7 +1,6 @@
 [
     {
         "codigo": "0001",
-<<<<<<< Updated upstream
         "tiposobra": "irregular",
         "descricao": "CHAPA",
         "espessura": "8",
@@ -9,7 +8,10 @@
         "comprimento": "400",
         "material": "A36",
         "localizacao": "CNC",
-        "imagem": "uploads\/1747925635_WhatsApp Image 2025-02-27 at 09.31.50.jpeg"
+        "imagem": "uploads\/1747925635_WhatsApp Image 2025-02-27 at 09.31.50.jpeg",
+        "reservada": true,
+        "reservada_por": "encarregado",
+        "codigo_projeto": "HC251463"
     },
     {
         "codigo": "0002",
@@ -55,7 +57,11 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "detalhamento",
+        "codigo_projeto": "hc246503",
+        "oculta": true
     },
     {
         "codigo": "0006",
@@ -3052,14 +3058,16 @@
         "material": "",
         "localizacao": "",
         "imagem": ""
-=======
-        "descricao": "CHAPA",
-        "espessura": "8",
-        "largura": "200",
-        "comprimento": "500",
-        "imagem": "uploads\/1747366294_wallpaperflare.com_wallpaper (2).jpg",
-        "material": "A36",
-        "localizacao": "CNC"
->>>>>>> Stashed changes
+    },
+    {
+        "codigo": "0278",
+        "tiposobra": "sobraregular",
+        "descricao": "",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": ""
     }
 ]
