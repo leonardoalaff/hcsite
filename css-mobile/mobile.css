@@ -15,7 +15,6 @@
 }
 
 body {
-    display: none;
     background-color: #f7f9fa;
 }
 
@@ -268,7 +267,7 @@ main {
     position: relative;
     top: -1vh;
     color: #1c1c1c;
-    font-size: 0.4em;
+    font-size: 1em;
 }
 
 .label-filtro-material {
