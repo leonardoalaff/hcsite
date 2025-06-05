@@ -15,6 +15,7 @@
 }
 
 body {
+    display: none;
     background-color: #f7f9fa;
 }
 

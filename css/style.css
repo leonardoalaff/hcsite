@@ -16,6 +16,7 @@
 }
 
 body {
+    display: none;
     overflow-x: hidden;
 }
 

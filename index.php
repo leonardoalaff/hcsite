@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
-<body class="corpo">
+<body>
 
     <div class="menu" style='background: #003f5c; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.67)'>
         <div class="menu-icon menu-icon-perfil">
