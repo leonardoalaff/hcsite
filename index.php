@@ -74,25 +74,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css-mobile2/mobile.css">
+    <link rel="stylesheet" href="css3/style.css">
+    <link rel="stylesheet" href="css-mobile3/mobile.css">
 </head>
 <body>
 
     <div class="menu" style='background: #003f5c; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.67)'>
         <div class="menu-icon menu-icon-perfil">
             <h1 class="texto-menu texto-menu-perfil">Perfil</h1>
-            <div style='width: 200px; height: 200px; background: #1E1E1E; position: relative; z-index: 999;' class="card-perfis">
+            <div class="card-perfis">
                 <div class='box-conta'>
-                    <h2 class="tipo-perfil">Detalhamento</h2>
+                    <h2 class="tipo-perfil1 tipo-perfil">Detalhamento</h2>
                 </div>
 
                 <div class='box-conta'>
-                    <h2 class="tipo-perfil2">Encarregado</h2>
+                    <h2 class="tipo-perfil2 tipo-perfil">Encarregado</h2>
                 </div>
 
                 <div class='box-conta'>
-                    <h2 class="tipo-perfil3">Operador</h2>
+                    <h2 class="tipo-perfil3 tipo-perfil">Operador</h2>
                 </div>
             </div>
         </div>
