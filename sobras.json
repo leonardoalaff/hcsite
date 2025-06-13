@@ -3069,5 +3069,19 @@
         "material": "",
         "localizacao": "",
         "imagem": ""
+    },
+    {
+        "codigo": "0279",
+        "tiposobra": "sobraregular",
+        "descricao": "chapa teste de ordem",
+        "espessura": "8",
+        "largura": "1500",
+        "comprimento": "6000",
+        "material": "A572",
+        "localizacao": "estoque",
+        "imagem": "uploads\/1749833041_WhatsApp Image 2025-02-27 at 09.31.50.jpeg",
+        "reservada": true,
+        "reservada_por": "detalhamento",
+        "codigo_projeto": "HC253678"
     }
 ]

@@ -43,6 +43,9 @@ function filtrarSobras($sobras, $material, $espessura, $codigo) {
 
 $sobras_filtradas = filtrarSobras($sobras, $filtro_material, $filtro_espessura, $filtro_codigo);
 
+$sobras_filtradas = array_reverse($sobras_filtradas);
+
+
 header('Content-Type: text/html; charset=utf-8');
 ?>
 
@@ -51,11 +54,10 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="css2/estilo.css">
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="css4/estilo.css">
 </head>
 <body>
-    <h2>Sobras Encontradas:</h2>
+    <h2 class="t-sobras-encontradas">Sobras Encontradas:</h2>
 
     <?php if (!empty($sobras_filtradas)): ?>
         <?php foreach ($sobras_filtradas as $sobra): ?>
@@ -103,8 +105,8 @@ if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
 
     <!-- Formulário de reserva -->
     <form method="POST" action="reservar_sobra.php" class="form-reserva" id="form-<?= htmlspecialchars($sobra["codigo"]) ?>" style="display:none; margin-top:5px;">
-        <input type="hidden" name="codigo_reserva" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
-        <input type="text" name="codigo_projeto" placeholder="Código do projeto" required>
+        <input class="input-reservar-sobra" type="hidden" name="codigo_reserva" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
+        <input class="input-reservar-sobra" type="text" name="codigo_projeto" placeholder="Código do projeto" required>
         <button type="submit" class="reservar-btn">Confirmar reserva</button>
     </form>
 <?php endif; ?>
