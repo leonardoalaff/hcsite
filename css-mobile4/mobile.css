@@ -25,6 +25,7 @@ body {
 }
 
 .menu {
+    background-color: #003f5c;
     width: 60%;
     height: 100vh;
     position: fixed;
@@ -32,7 +33,8 @@ body {
     transition: 0.3s;
     gap: 200px;
     left: -100%;
-     transition: 0.2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.747);
+    transition: 0.2s;
 }
 .menu.active {
     left: 0;
@@ -175,10 +177,8 @@ body {
     padding: 30px;
     width: 95%;
     height: 90vh;
-    margin: auto;
     border-radius: 10px;
     display: none;
-    margin: 10px;
     transition: 0.5s;
 }
 .card-add-sobra::-webkit-scrollbar {

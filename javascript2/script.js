@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const linhaMenu = document.querySelector('.linha-menu');
     const linhaMenu2 = document.querySelector('.linha-menu2');
     const menu = document.querySelector('.menu');
+    const body = document.querySelector('body');
 
     abrirMenu.addEventListener('click', () => {
         menu.classList.toggle('active');
@@ -59,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     fecharCardSobra.addEventListener('click', () => {
+        cardAddSobra.classList.remove('active');
+    });
+
+    body.addEventListener('click', () => {
         cardAddSobra.classList.remove('active');
     });
 

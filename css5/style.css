@@ -15,6 +15,10 @@
     user-select: none;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -65,13 +69,15 @@ body {
 
 .card-perfis {
     display: none;
+    width: 650%;
     position: relative;
     left: 450%;
     top: -7vh;
-    padding-top: 30px;
-    padding-left: 20px;
+    padding: 20px;
+    font-size: 1em;
     box-shadow: 0 0 10px black;
     transition: 0.3s;
+    border-radius: 10px;
 }
 .box-conta {
     margin-bottom: 20px;
@@ -182,22 +188,25 @@ body {
     transition: 0.3s;
 }
 
-.card-perfis {
-    width: 2000px;
-    height: 2000px;
-}
-
 .card-add-sobra {
+    overflow: auto;
     position: fixed;
-    left: 22.5%;
-    width: 80%;
-    height: 98vh;
+    left: 10%;
     z-index: 20;
     border-radius: 20px;
     padding: 50px;
     display: none;
-    margin: 10px;
     transition: 0.5s;
+    background: #1E1E1E;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    width: 80%;
+    height: 90vh;
+    margin: 5vh;
+    border-radius: 10px;
+}
+.card-add-sobra::-webkit-scrollbar {
+    display: none;
 }
 
 .fechar-card-sobra {
@@ -208,8 +217,7 @@ body {
     height: 30px;
     border-radius: 50%;
     position: relative;
-    right: -100%;
-    top: -10%;
+    right: -95%;
     z-index: 20;
     transition: 0.3s;
 }
@@ -285,49 +293,78 @@ label, input {
 
 
 
+.box-filtro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
 .form-filtro {
     display: flex;
+    padding-left: 15%;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    height: 7vh;
+    height: 30vh;
     position: relative;
-    top: -1vh;
-    color: #E0E0E0;
-    font-size: 0.6em;
+    color: white;
+    font-size: 1em;
+    top: 0.1vh;
+}
+
+.box-li-filtro {
+    position: relative;
+    margin-left: 5%;
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-filtro {
+    height: 50%;
+    width: 60%;
+    box-shadow: none;
+    border: 1px solid white;
+}
+.label-filtro {
+    position: relative;
+}
+
+.label-filtro-codigo {
+}
+.input-filtro-codigo {
 }
 
 .label-filtro-material {
-    position: relative;
-    top: -2vh;
 }
 
 .input-filtro-material {
-    position: relative;
-    top: -2vh;
 }
 
 
 .label-filtro-espessura {
-    position: relative;
-    top: -2vh;
 }
 
 .input-filtro-espessura {
-    position: relative;
-    top: -2vh;
 }
 
 
-
-
-
-
-
-
-
-
-
-
+.btn-sobras {
+    background-color: #1E1E1E;
+    position: relative;
+    top: 15vh;
+    width: 100%;
+    right: 50%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-sobras:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px black;
+    transition: 0.3s;
+}
 
 
 header {
@@ -406,22 +443,6 @@ header h1 {
 
 #tiposobra {
 }
-
-
-
-
-
-
-
-.card-add-sobra {
-    background: #1E1E1E;
-    box-shadow: 0 0 10px black;
-    padding: 20px;
-    width: 60%;
-    height: 90vh;
-    margin: auto;
-    border-radius: 10px;
-  }
 
   .form-card-sobra {
     display: flex;
