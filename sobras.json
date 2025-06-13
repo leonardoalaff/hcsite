@@ -3071,7 +3071,8 @@
         "imagem": "",
         "reservada": true,
         "reservada_por": "encarregado",
-        "codigo_projeto": "HC253614"
+        "codigo_projeto": "HC253614",
+        "oculta": true
     },
     {
         "codigo": "0279",
@@ -3086,5 +3087,19 @@
         "reservada": true,
         "reservada_por": "detalhamento",
         "codigo_projeto": "HC253678"
+    },
+    {
+        "codigo": "0280",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA TESTE",
+        "espessura": "8",
+        "largura": "600",
+        "comprimento": "4000",
+        "material": "A572",
+        "localizacao": "CNC",
+        "imagem": "uploads\/1749837033_WhatsApp Image 2025-02-27 at 09.31.50.jpeg",
+        "reservada": true,
+        "reservada_por": "detalhamento",
+        "codigo_projeto": "HC251236"
     }
 ]
