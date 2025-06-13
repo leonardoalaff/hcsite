@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css-mobile/mobile.css">
+    <link rel="stylesheet" href="css-mobile2/mobile.css">
 </head>
 <body>
 
@@ -173,7 +173,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <header>
         <h1>Controle de sobras HC</h1>
-        <div class="abrir-menu"></div>
+        <div class="abrir-menu">
+            <div class="linha-menu"></div>
+            <div class="linha-menu2"></div>
+        </div>
     </header>
 
     <main>
@@ -188,14 +191,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
          <div class="box-filtro">
           <form class="form-filtro" method="get" action="listar_sobras.php" style="margin: 40px 0;">
 
-            <label style='font-size: 1.4em; margin-right: 1%' for="codigo">Código:</label>
-            <input style='border: 1px solid white; color: white; margin-right: 5%; width: 30%' type="text" name="codigo" id="codigo">
-            
-            <label style='font-size: 1.4em; margin-right: 1%' for="material">Material:</label>
-            <input style='border: 1px solid white; color: white; margin-right: 5%; width: 30%' type="text" name="material" id="material">
+          <div class="box-li-filtro">
+            <label class="label-filtro-codigo label-filtro" for="codigo">Código:</label>
+            <input class="input-filtro-codigo input-filtro" type="text" name="codigo" id="codigo">
+          </div>
 
-            <label style='font-size: 1.4em; margin-right: 1%' for="espessura">Espessura:</label>
-            <input style='border: 1px solid white; color: white; margin-right: 5%; width: 30%' type="number" name="espessura" id="espessura" step="any">
+          <div class="box-li-filtro">
+            <label class="label-filtro-material label-filtro" for="material">Material:</label>
+            <input class="input-filtro-material input-filtro" type="text" name="material" id="material">
+          </div>
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-espessura label-filtro" for="espessura">Espessura:</label>
+            <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any">
+          </div>
 
             <button class="btn-sobras" style='color: white; border: none; padding: 7px; position: relative; border-radius: 10px' type="submit">SOBRAS</button>
         </form>
@@ -224,6 +233,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript/script.js"></script>
+    <script src="javascript2/script.js"></script>
 </body>
 </html>

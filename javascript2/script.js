@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     abrirMenu.addEventListener('click', () => {
         menu.classList.toggle('active');
+        linhaMenu.classList.toggle('active')
+        linhaMenu2.classList.toggle('active')
+        abrirMenu.classList.toggle('active')
 })
 
     menuIconPerfil.addEventListener('click', () => {
