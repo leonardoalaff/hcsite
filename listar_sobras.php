@@ -76,15 +76,16 @@ header('Content-Type: text/html; charset=utf-8');
 
                 <?php endif; ?>
 
-                <?php if (!empty($sobra['reservada'])): ?>
-    <p class="sobra-reservada">Reservada por: <strong><?=   htmlspecialchars($sobra['reservada_por']) ?></strong></p>
-    <?php endif; ?>
-
-
 
     <?php if (!empty($sobra['reservada']) && !empty($sobra['codigo_projeto'])): ?>
-    <p class="sobra-reservada">Reservada para o projeto: <strong><?= htmlspecialchars($sobra['codigo_projeto']) ?></strong></p>
+    <p class="sobra-reservada sobra-reservada2">Reservada para o projeto: <strong><?= htmlspecialchars($sobra['codigo_projeto']) ?></strong></p>
 <?php endif; ?>
+
+
+
+<?php if (!empty($sobra['reservada'])): ?>
+    <p class="sobra-reservada">Reservada por: <strong><?=   htmlspecialchars($sobra['reservada_por']) ?></strong></p>
+    <?php endif; ?>
 
 
                 <?php

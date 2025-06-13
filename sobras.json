@@ -3068,7 +3068,10 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "encarregado",
+        "codigo_projeto": "HC253614"
     },
     {
         "codigo": "0279",

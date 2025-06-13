@@ -46,6 +46,10 @@ h2 {
     border-radius: 4px;
 }
 
+.sobra-reservada {
+    color: #FFA500;
+}
+
 .remover-btn {
     background-color: red;
     color: white;
@@ -88,16 +92,6 @@ h2 {
     margin-top: 30px;
     font-size: 3em;
 }
-
-
-
-
-
-
-
-
-
-
 
 .sobra-img {
         width: 160%;
