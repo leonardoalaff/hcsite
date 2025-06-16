@@ -187,6 +187,9 @@ body {
     display: flex;
     transition: 0.3s;
 }
+.card-add-sobra::-webkit-scrollbar {
+    display: none;
+}
 
 .card-add-sobra {
     overflow: auto;
@@ -205,9 +208,11 @@ body {
     margin: 5vh;
     border-radius: 10px;
 }
-.card-add-sobra::-webkit-scrollbar {
-    display: none;
+.card-add-sobra.active {
+    display: block;
+    transition: 0.5s;
 }
+
 
 .fechar-card-sobra {
     background: url('https://cdn-icons-png.flaticon.com/512/458/458594.png');

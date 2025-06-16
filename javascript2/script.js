@@ -63,10 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         cardAddSobra.classList.remove('active');
     });
 
-    body.addEventListener('click', () => {
-        cardAddSobra.classList.remove('active');
-    });
-
     // Miniaturas de imagem
     const miniaturas = document.querySelectorAll(".miniatura");
     const modal = document.getElementById("modal-imagem");

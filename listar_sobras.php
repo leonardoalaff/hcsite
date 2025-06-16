@@ -54,7 +54,8 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="css4/estilo.css">
+    <link rel="stylesheet" href="css6/estilo.css">
+    <link rel="stylesheet" href="css-mobile4/mobile2.css">
 </head>
 <body>
     <h2 class="t-sobras-encontradas">Sobras Encontradas:</h2>
