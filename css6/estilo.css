@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1001px) {
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
