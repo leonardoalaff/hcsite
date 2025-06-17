@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
     <link rel="stylesheet" href="css5/style.css">
-    <link rel="stylesheet" href="css-mobile4/mobile.css">
+    <link rel="stylesheet" href="css-mobile6/mobile.css">
 </head>
 <body>
 
@@ -128,14 +128,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <div class="form-row">
       <div class="form-group">
         <label for="espessura">Espessura</label>
-        <input type="number" name="espessura">
+        <input type="float" name="espessura">
       </div>
       <div class="form-group">
-        <label for="largura">Largura</label>
-        <input type="number" name="largura">
+        <label for="largura">Dimensões</label>
+        <input type="text" name="largura">
       </div>
       <div class="form-group">
-        <label for="comprimento">Comprimento</label>
+        <label for="comprimento">Quantidade</label>
         <input type="number" name="comprimento">
       </div>
     </div>

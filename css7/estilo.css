@@ -21,7 +21,8 @@ h2 {
 
 .sobra-card {
     display: inline-table;
-    width: 10%;
+    width: 25%;
+    height: 10vh;
     padding: 15px;
     margin-top: 100px;
     margin-bottom: 15px;
@@ -118,4 +119,63 @@ h2 {
 body.no-scroll {
         overflow: hidden;
     }
+
+
+.editar-btn {
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.editar-btn:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.box-editar-sobra {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-editar-sobra {
+    background-color: #1E1E1E;
+    text-align: center;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.btn-salvar-editar {
+    background-color: #007fc7;
+    color: white;
+    margin-top: 30px;
+    width: 60%;
+}
+
+.btn-voltar-editar {
+    background-color: #f95d6a;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    bottom: 103vh;
+    font-size: 1em;
+    left: 90%;
+}
+
+.t-h1-editar-sobra {
+    font-size: 3em;
+    position: relative;
+    top: 4.5vh;
+}
+
+.form-editar-sobra input {
+    font-size: 1em;
+    border-radius: 5px;
+}
+
 }

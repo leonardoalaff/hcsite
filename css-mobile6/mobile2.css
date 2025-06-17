@@ -120,4 +120,68 @@ h2 {
 body.no-scroll {
         overflow: hidden;
     }
+
+    
+.editar-btn {
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.editar-btn:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.box-editar-sobra {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-editar-sobra {
+    background-color: #003f5c;
+    text-align: center;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 3em;
+}
+
+.form-editar-sobra input {
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.t-h1-editar-sobra {
+    font-size: 3em;
+    position: relative;
+    top: 3vh;
+}
+
+.btn-voltar-editar {
+    background-color: #f95d6a;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    bottom: 101.5vh;
+    font-size: 3em;
+    left: 80%;
+}
+
+.corpo-editar {
+    overflow: hidden;
+}
+
+.btn-salvar-editar {
+    background-color: #007fc7;
+    color: white;
+    margin-top: 30px;
+    width: 30%;
+}
+
 }

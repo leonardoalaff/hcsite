@@ -54,8 +54,8 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="css6/estilo.css">
-    <link rel="stylesheet" href="css-mobile4/mobile2.css">
+    <link rel="stylesheet" href="css7/estilo.css">
+    <link rel="stylesheet" href="css-mobile6/mobile2.css">
 </head>
 <body>
     <h2 class="t-sobras-encontradas">Sobras Encontradas:</h2>
@@ -66,9 +66,9 @@ header('Content-Type: text/html; charset=utf-8');
                 Código: <strong><?= htmlspecialchars($sobra["codigo"]) ?></strong><br>
                 Tipo: <strong><?= isset($sobra["tiposobra"]) && $sobra["tiposobra"] === "irregular" ? "Sobra irregular" : "Sobra regular" ?></strong><br>
                 Descrição: <strong><?= htmlspecialchars($sobra["descricao"]) ?></strong><br>
-                Espessura: <strong><?= htmlspecialchars($sobra["espessura"]) ?></strong><br>
-                Largura: <strong><?= htmlspecialchars($sobra["largura"]) ?></strong><br>
-                Comprimento: <strong><?= htmlspecialchars($sobra["comprimento"]) ?></strong><br>
+                Espessura: <strong>#<?= htmlspecialchars($sobra["espessura"]) ?></strong><br>
+                Dimensões: <strong><?= htmlspecialchars($sobra["largura"]) ?></strong><br>
+                Quantidade: <strong><?= htmlspecialchars($sobra["comprimento"]) ?>un.</strong><br>
                Material: <strong><?= htmlspecialchars($sobra["material"]) ?></strong><br>
                 Localização: <strong><?= htmlspecialchars($sobra["localizacao"]) ?></strong><br>
 
@@ -97,6 +97,18 @@ if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
 $perfil = $_SESSION['perfil'] ?? 'visitante';
 if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
 ?>
+
+
+<?php if ($perfil === 'detalhamento' || $perfil === 'encarregado'): ?>
+
+    <!-- Botão de Editar -->
+    <a href="editar_sobra.php?id=<?= htmlspecialchars($sobra["codigo"]) ?>" class="editar-btn">Editar</a>
+<?php endif; ?>
+
+
+
+
+
     <form method="POST" style="margin-top:10px;">
         <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
         <button type="submit" class="remover-btn">Remover sobra</button>
