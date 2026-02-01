@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css8/style.css">
+    <link rel="stylesheet" href="css9/style.css">
     <link rel="stylesheet" href="css-mobile6/mobile.css">
 </head>
 <body>
@@ -181,15 +181,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <main>
         <section class="sessao1">
-            <div class="card-avisos"></div>
-            <div class="card-avisos"></div>
-            <div class="card-avisos"></div>
-            <div class="card-avisos"></div>
+
+            <div class="card-avisos card-avisos1"><h1>CHAPAS</h1></div>
+
+            <div class="card-avisos card-avisos2"><h1>CANTONEIRAS</h1></div>
+
+            <div class="card-avisos card-avisos3"><h1>TUBOS</h1></div>
+
+            <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+
         </section>
 
         <!-- FORMULÁRIO DE FILTRO -->
          <div class="box-filtro">
-          <form class="form-filtro" method="get" action="listar_sobras.php" style="margin: 40px 0;">
+          <form class="form-filtro" method="get" action="listar_sobras.php">
 
           <div class="box-li-filtro">
             <label class="label-filtro-codigo label-filtro" for="codigo">Código:</label>
