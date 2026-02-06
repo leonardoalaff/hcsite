@@ -1,3 +1,16 @@
 [
-    
+    {
+        "codigo": "0001",
+        "tiposobra": "sobraregular",
+        "descricao": "TESTE",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "uploads\/1769994067_ChatGPT Image 26 de jan. de 2026, 00_20_53.png",
+        "reservada": true,
+        "reservada_por": "detalhamento",
+        "codigo_projeto": "HC251463"
+    }
 ]
