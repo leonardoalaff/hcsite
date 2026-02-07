@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const linhaMenu = document.querySelector('.linha-menu');
     const linhaMenu2 = document.querySelector('.linha-menu2');
     const menu = document.querySelector('.menu');
-    const body = document.querySelector('body');
+    
 
     abrirMenu.addEventListener('click', () => {
         menu.classList.toggle('active');
@@ -88,3 +88,131 @@ function abrirModal(src) {
     imgExpandida.src = src;
     modal.style.display = 'flex';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+    function fracaoParaDecimal(valor) {
+        valor = valor.toString().trim();
+
+        // Ex: "2 3/8"
+        if (valor.includes(" ")) {
+            const partes = valor.split(" ");
+            return parseFloat(partes[0]) + fracaoParaDecimal(partes[1]);
+        }
+
+        // Ex: "3/8"
+        if (valor.includes("/")) {
+            const [num, den] = valor.split("/");
+            return parseFloat(num) / parseFloat(den);
+        }
+
+        // Ex: "0.5"
+        return parseFloat(valor);
+    }
+
+    function decimalParaFracao(decimal, maxDen = 64) {
+        let melhorNum = 1;
+        let melhorDen = 1;
+        let menorErro = Math.abs(decimal - 1);
+
+        for (let den = 1; den <= maxDen; den++) {
+            let num = Math.round(decimal * den);
+            let erro = Math.abs(decimal - num / den);
+
+            if (erro < menorErro) {
+                menorErro = erro;
+                melhorNum = num;
+                melhorDen = den;
+            }
+        }
+
+        return `${melhorNum}/${melhorDen}`;
+    }
+
+    function mmParaPol() {
+        const mm = document.getElementById("mm").value;
+        if (mm === "") return;
+
+        const polegadasDecimal = mm / 25.4;
+        const polegadasFracao = decimalParaFracao(polegadasDecimal);
+
+        document.getElementById("resultado").innerText =
+            `${mm} mm = ${polegadasFracao}" (${polegadasDecimal.toFixed(4)})`;
+    }
+
+    function polParaMm() {
+        const polInput = document.getElementById("pol").value;
+        if (polInput === "") return;
+
+        const polegadasDecimal = fracaoParaDecimal(polInput);
+        const mm = polegadasDecimal * 25.4;
+
+        document.getElementById("resultado").innerText =
+            `${polInput}" = ${mm.toFixed(2)} mm`;
+    }
+
+
+
+
+
+
+
+
+    const btnAcoTubo = document.querySelector('#btnacotubo');
+const boxIframe1 = document.querySelector('#boxiframe1');
+const btnDjafer = document.querySelector('#btndjafer');
+const boxIframe2 = document.querySelector('#boxiframe2');
+
+
+btnAcoTubo.addEventListener('click', () => {
+   
+    boxIframe1.classList.toggle("active");
+});
+
+btnDjafer.addEventListener('click', () => {
+   
+    boxIframe2.classList.toggle("active");
+});
+
+
+
+    
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".s-ferramentas .container");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                container.classList.add("aparecer");
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    observer.observe(container);
+});
+
+
+
+
+
+
+
+
+
+

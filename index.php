@@ -74,11 +74,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css9/style.css">
+    <link rel="stylesheet" href="css13/style.css">
     <link rel="stylesheet" href="css-mobile6/mobile.css">
 </head>
 <body>
-
     <div class="menu">
         <div class="menu-icon menu-icon-perfil">
             <h1 class="texto-menu texto-menu-perfil">Perfil</h1>
@@ -103,6 +102,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             <div class="menu-icon menu-icon-add-sobra">
                 <h1 class="texto-menu texto-menu-add-sobra">Add Sobra</h1>
             </div>
+
+
+
+
+            <div class="box-tabelas"><button id="btnacotubo">Catalogo Aço Tubo</button>
+<button id="btndjafer">Catalogo Djafer</button>
+
+<div id="boxiframe1"><iframe src="https://acotubo.com.br/wp-content/uploads/2022/10/Catalogo-tubos-barras.pdf" frameborder="0"></iframe></div>
+    
+
+<div id="boxiframe2"><iframe src="https://www.djafer.com.br/wp-content/uploads/2020/06/Cata%CC%81logo-de-Produtos-Djafer.pdf" frameborder="0"></iframe></div></div>
+
+
+
+
         <?php endif; ?>
 
     </div>
@@ -172,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
 
     <header>
-        <h1>Controle de sobras HC</h1>
+        <h1>CONTROLE DE ESTOQUE DETALHAMENTO</h1>
         <div class="abrir-menu">
             <div class="linha-menu"></div>
             <div class="linha-menu2"></div>
@@ -182,9 +196,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <main>
         <section class="sessao1">
 
-            <div class="card-avisos card-avisos1"><h1>CHAPAS</h1></div>
+            <div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div>
 
-            <div class="card-avisos card-avisos2"><h1>CANTONEIRAS</h1></div>
+            <div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div>
 
             <div class="card-avisos card-avisos3"><h1>TUBOS</h1></div>
 
@@ -211,11 +225,54 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any">
           </div>
 
-            <button class="btn-sobras" style='color: white; border: none; padding: 7px; position: relative; border-radius: 5px' type="submit">SOBRAS</button>
+            <button class="btn-sobras" style='border: none; padding: 7px; position: relative; border-radius: 5px' type="submit">Buscar sobras</button> 
         </form>
          </div>
         
     </main>
+
+
+
+
+
+
+
+
+
+
+        <!-------------------------FERRAMENTAS------------------------->
+    <section class="s-ferramentas">
+
+    <h1>FERRAMENTAS</h1>
+
+    <div class="container">
+    <h2>Conversor de Medidas</h2>
+
+    <input type="number" id="mm" placeholder="Milímetros (mm)">
+    <button onclick="mmParaPol()">Converter para polegadas</button>
+
+    <input type="text" id="pol" placeholder="Polegadas (in)">
+    <button onclick="polParaMm()">Converter para milímetros</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
 
     <footer></footer>
 
@@ -238,6 +295,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript2/script.js"></script>
+    <script src="javascript4/script.js"></script>
 </body>
 </html>

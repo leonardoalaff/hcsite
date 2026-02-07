@@ -12,7 +12,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #F9FAF7;
+    background-color: transparent;
     user-select: none;
     color: #111827;
 }
@@ -31,14 +31,19 @@ body {
     height: 100vh;
     position: fixed;
     z-index: 10;
-    transition: 0.3s;
+    transition: 0.5s;
     gap: 200px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.171);
 }
 .menu:hover {
     width: 20%;
     box-shadow: 3px 3px 5px rgba(12, 12, 12, 0.144);
-    transition: 0.3s;
+    transition: 0.5s;
 }
+.menu:hover .box-tabelas {
+    display: block;
+}
+
 .menu:hover > .menu-icon {
     right: 37%;
 }
@@ -49,15 +54,15 @@ body {
     border-radius: 50%;
     position: relative;
     top: 5vh;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .menu-icon:hover {
     transform: scale(1.1);
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .menu-icon:hover > .texto-menu {
-    transition: 0.3s;
+    transition: 0.5s;
 } 
 .menu-icon-perfil {
     background: url('https://images.freeimages.com/image/thumbs/374/instabutton-png-design-5690390.png');
@@ -77,7 +82,7 @@ body {
     top: -5vh;
     padding: 20px;
     box-shadow: 0 0 10px black;
-    transition: 0.3s;
+    transition: 0.5s;
     background-color: #2563EB;
 }
 .box-conta {
@@ -101,7 +106,7 @@ body {
 
 .menu-icon-perfil:hover > .card-perfis {
     display: block;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 
@@ -182,11 +187,11 @@ body {
     color: white;
     display: none;
     align-items: center;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .menu:hover > .menu-icon > .texto-menu {
     display: flex;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .card-add-sobra::-webkit-scrollbar {
     display: none;
@@ -224,12 +229,12 @@ body {
     position: relative;
     right: -95%;
     z-index: 20;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .fechar-card-sobra:hover {
     transform: scale(1.1);
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .card-add-sobra.active {
     display: block;
@@ -299,24 +304,26 @@ label, input {
 
 
 .box-filtro {
+    background-color: #2563EB;
     width: 100%;
     height: 100vh;
     display: flex;
 }
 .form-filtro {
     display: flex;
-    padding-left: 15%;
     width: 100%;
     align-items: center;
     justify-content: center;
     height: 30vh;
     position: relative;
     color: #6B7280;
-    font-size: 1em;
     top: 0.1vh;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .box-li-filtro {
+    background-color: transparent;
     position: relative;
     margin-left: 5%;
     width: 80%;
@@ -327,13 +334,14 @@ label, input {
 }
 
 .input-filtro {
-    height: 50%;
+    height: 30%;
     width: 60%;
     border: 1px solid #E5E7EB;
-    background-color: #FFFFFF;
 }
 .label-filtro {
+    color: white;
     position: relative;
+    top: -6%;
 }
 
 .label-filtro-codigo {
@@ -356,67 +364,180 @@ label, input {
 
 
 .btn-sobras {
-    background-color: #2563EB;
+    background-color: white;
+    color: #111827;
     position: relative;
-    top: 15vh;
-    width: 100%;
-    right: 50%;
-    font-weight: bold;
-    transition: 0.3s;
+    top: -3%;
+    width: 50%;
+    margin-left: 7%;
+    margin-right: 7%;
 
 }
 .btn-sobras:hover {
-    transform: scale(1.05);
     cursor: pointer;
-    box-shadow: 3px 3px 5px rgba(12, 12, 12, 0.219);
-    transition: 0.3s;
+    background-color: rgb(233, 231, 231);
 }
 
 
 header {
-    width: 90%;
+    background-color: #2563EB;
+    width: 100%;
     height: 10vh;
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    left: 10%;
 }
 header h1 {
+    background-color: transparent;
     position: relative;
     top: 40px;
-    margin-left: 5%;
-    color: #111827;
+    color: white;
     font-size: 25px;
     z-index: 2;
 }
 
+body {
+    background-color: #2563EB;
+}
+
+
+
+
+
+
+
+
+
+
+/******************************SESSÕES*****************************/
+
 .sessao1 {
+    background-color: #2563EB;
     width: 100%;
     height: 27vh;
     display: flex;
     align-items: center;
     position: relative;
+    margin-top: 50px;
     overflow-x: auto;
 }
+
+
+
+.s-ferramentas {
+    background-color: #f4f6f8;
+    position: relative;
+    top: -20vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.s-ferramentas h1 {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+position: relative;
+top: 100px;
+}
+.container {
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 320px;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 20%;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 15px;
+        border: none;
+        border-radius: 6px;
+        background: #2563EB;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    .resultado {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #222;
+    }
+
+
+    .s-ferramentas {
+    padding: 80px 0;
+}
+
+/* estado inicial (invisível) */
+.s-ferramentas .container {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease-out;
+
+    background: linear-gradient(135deg, #f4f6f8, #ffffff);
+    border-radius: 10px;
+}
+
+/* quando entrar na tela */
+.s-ferramentas .container.aparecer {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+/******************************CARD AVISOS*****************************/
 
 .card-avisos {
     background-color: #FFFFFF;
     min-width: 15vw;
-    height: 7vh;
+    height: 10vh;
     margin-left: 7%;
     margin-top: 5vh;
     border-radius: 5px;
     box-shadow: 3px 3px 5px rgba(12, 12, 12, 0.144);
+    transition: 0.5s;
+}
+.card-avisos:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
 }
 .card-avisos1 {
-    background: url('chapas.svg');
+    background: url('ChatGPT\ Image\ 6\ de\ fev.\ de\ 2026\,\ 21_19_29.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 .card-avisos2 {
-    background: url('https://www.polinoxbh.com.br/wp-content/uploads/2024/07/Barras-e-Cantoneiras-Quais-sao-as-principais-aplicacoes-em-Estruturas-Metalicas-e-Construcao-Civil.jpg');
+    background: url('Ferramentas\ de\ medição\ em\ evidência\ \(1\).png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -435,14 +556,14 @@ header h1 {
 
 }
 .card-avisos h1 {
-    background-color: #2564eb;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
     height: 100%;
     display: none;
     align-items: center;
-    justify-content: center;
     border-radius: 5px;
+    justify-content: center;
     transition: 0.5s;
 }
 .card-avisos:hover h1 {
@@ -554,7 +675,7 @@ header h1 {
     color: #1E1E1E;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.5s;
     width: fit-content;
     padding: 10px 20px;
     align-self: flex-start;
@@ -564,4 +685,49 @@ header h1 {
   .form-card-sobra input[type="submit"]:hover {
     background: #ccc;
   }
+}
+
+
+
+.box-tabelas {
+    display: none;
+    position: relative;
+    top: 50%;
+    width: 100%;
+    height: 80%;
+}
+
+#boxiframe1 {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#boxiframe1.active{
+    display: flex;
+}
+
+#boxiframe2 {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#boxiframe2.active{
+    display: flex;
+}
+
+
+
+
+
+iframe {
+    width: 80%;
+    height: 80%;
 }
