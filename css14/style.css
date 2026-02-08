@@ -41,9 +41,6 @@ body {
     box-shadow: 3px 3px 5px rgba(12, 12, 12, 0.144);
     transition: 0.5s;
 }
-.menu:hover .box-tabelas {
-    display: block;
-}
 
 .menu:hover > .menu-icon {
     right: 37%;
@@ -84,7 +81,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px black;
     transition: 0.5s;
-    background-color: #2563EB;
+    border: 1px solid white;
 }
 .box-conta {
     margin-bottom: 20px;
@@ -107,6 +104,7 @@ body {
 
 .menu-icon-perfil:hover > .card-perfis {
     display: block;
+    background-color: black;
     transition: 0.5s;
 }
 
@@ -206,13 +204,15 @@ body {
     padding: 50px;
     display: none;
     transition: 0.5s;
-    background: #2563EB;
+    background: rgba(0, 0, 0, 0.733);
+    backdrop-filter: blur(15px);
     box-shadow: 0 0 10px black;
     padding: 20px;
     width: 80%;
     height: 90vh;
     margin: 5vh;
     border-radius: 10px;
+    border: 1px solid white;
 }
 .card-add-sobra.active {
     display: block;
@@ -306,7 +306,6 @@ label, input {
 
 .box-filtro {
     width: 100%;
-    height: 100vh;
     display: flex;
 }
 .form-filtro {
@@ -314,12 +313,13 @@ label, input {
     width: 100%;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 20%;
     position: relative;
     color: #6B7280;
     top: 0.1vh;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 10%;
 }
 
 .box-li-filtro {
@@ -364,18 +364,21 @@ label, input {
 
 
 .btn-sobras {
-    background-color: white;
-    color: #111827;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border: 1px solid white;
+    color: white;
     position: relative;
     top: -3%;
     width: 50%;
     margin-left: 7%;
     margin-right: 7%;
-
+    transition: 0.3s;
 }
 .btn-sobras:hover {
     cursor: pointer;
-    background-color: rgb(233, 231, 231);
+    background-color: rgb(202, 74, 0);
+    transition: 0.3s;
 }
 
 
@@ -450,7 +453,7 @@ video {
 }
 
 .box-card-avisos {
-    margin-left: 15%;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -526,6 +529,11 @@ top: 100px;
     padding: 80px 0;
 }
 
+.sessao2 {
+    width: 100%;
+    height: 100vh;
+}
+
 /* estado inicial (invisível) */
 .s-ferramentas .container {
     opacity: 0;
@@ -542,6 +550,79 @@ top: 100px;
     transform: translateX(0);
 }
 
+.sessao3 {
+    width: 100%;
+    height: 100vh;
+}
+
+#btnacotubo, #btndjafer {
+    margin-top: 100px;
+    background-color: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 200px;
+    height: 40px;
+}
+
+#btnacotubo:hover {
+    background-color: #0056b3;
+}
+#btndjafer:hover {
+    background-color: #0056b3;
+}
+
+
+
+.box-tabelas {
+    top: 15%;
+    width: 100%;
+    height: 80%;
+}
+
+.box-btn-tabelas {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 80px;
+}
+
+#boxiframe1 {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#boxiframe1.active{
+    display: flex;
+}
+
+#boxiframe2 {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#boxiframe2.active{
+    display: flex;
+}
+
+
+
+
+
+iframe {
+    width: 80%;
+    height: 90%;
+}
+
 
 
 
@@ -556,7 +637,7 @@ top: 100px;
     margin-left: 7%;
     margin-top: 5vh;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(12, 12, 12, 0.568);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
     transition: 0.5s;
 }
 .card-avisos:hover {
@@ -576,13 +657,13 @@ top: 100px;
     background-size: cover;
 }
 .card-avisos3 {
-    background: url('ceara.png');
+    background: url('nova-unidade.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 .card-avisos4 {
-    background: url('nova-unidade.png');
+    background: url('ceara.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -722,50 +803,3 @@ top: 100px;
 }
 
 
-#btnacotubo, #btndjafer {
-    background-color: transparent;
-}
-
-
-.box-tabelas {
-    display: none;
-    position: relative;
-    top: 50%;
-    width: 100%;
-    height: 80%;
-}
-
-#boxiframe1 {
-    position: relative;
-    top: 100px;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-#boxiframe1.active{
-    display: flex;
-}
-
-#boxiframe2 {
-    position: relative;
-    top: 100px;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-#boxiframe2.active{
-    display: flex;
-}
-
-
-
-
-
-iframe {
-    width: 80%;
-    height: 80%;
-}

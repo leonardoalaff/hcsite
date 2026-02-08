@@ -103,20 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
                 <h1 class="texto-menu texto-menu-add-sobra">Add Sobra</h1>
             </div>
 
-
-
-
-            <div class="box-tabelas"><button id="btnacotubo">Catalogo Aço Tubo</button>
-<button id="btndjafer">Catalogo Djafer</button>
-
-<div id="boxiframe1"><iframe src="https://acotubo.com.br/wp-content/uploads/2022/10/Catalogo-tubos-barras.pdf" frameborder="0"></iframe></div>
-    
-
-<div id="boxiframe2"><iframe src="https://www.djafer.com.br/wp-content/uploads/2020/06/Cata%CC%81logo-de-Produtos-Djafer.pdf" frameborder="0"></iframe></div></div>
-
-
-
-
         <?php endif; ?>
 
     </div>
@@ -197,6 +183,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     </header>
 
     <main>
+        <!-- FORMULÁRIO DE FILTRO -->
+         <div class="box-filtro">
+          <form class="form-filtro" method="get" action="listar_sobras.php">
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-codigo label-filtro" for="codigo">Código:</label>
+            <input class="input-filtro-codigo input-filtro" type="text" name="codigo" id="codigo">
+          </div>
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-material label-filtro" for="material">Material:</label>
+            <input class="input-filtro-material input-filtro" type="text" name="material" id="material">
+          </div>
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-espessura label-filtro" for="espessura">Espessura:</label>
+            <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any">
+          </div>
+
+            <button class="btn-sobras" style='padding: 7px; position: relative; border-radius: 5px' type="submit">Buscar sobras</button> 
+        </form>
+         </div>
+        
         <section class="sessao1" id="carrossel">
 
             <div class="box-card-avisos">
@@ -223,28 +232,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
         </section>
 
-        <!-- FORMULÁRIO DE FILTRO -->
-         <div class="box-filtro">
-          <form class="form-filtro" method="get" action="listar_sobras.php">
-
-          <div class="box-li-filtro">
-            <label class="label-filtro-codigo label-filtro" for="codigo">Código:</label>
-            <input class="input-filtro-codigo input-filtro" type="text" name="codigo" id="codigo">
-          </div>
-
-          <div class="box-li-filtro">
-            <label class="label-filtro-material label-filtro" for="material">Material:</label>
-            <input class="input-filtro-material input-filtro" type="text" name="material" id="material">
-          </div>
-
-          <div class="box-li-filtro">
-            <label class="label-filtro-espessura label-filtro" for="espessura">Espessura:</label>
-            <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any">
-          </div>
-
-            <button class="btn-sobras" style='border: none; padding: 7px; position: relative; border-radius: 5px' type="submit">Buscar sobras</button> 
-        </form>
-         </div>
+        
         
     </main>
     </div>
@@ -275,14 +263,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <div class="resultado" id="resultado"></div>
 </div>
 
-
-
-
-
-
-
     </section>
 
+
+    <section class="sessao3">
+
+        <div class="box-tabelas">
+
+            <div class="box-btn-tabelas">
+                <button id="btnacotubo">Catalogo Aço Tubo</button>
+
+            <button id="btndjafer">Catalogo Djafer</button>
+            </div>
+            
+
+        <div id="boxiframe1"><iframe src="https://acotubo.com.br/wp-content/uploads/2022/10/Catalogo-tubos-barras.pdf" frameborder="0"></iframe></div>
+    
+
+        <div id="boxiframe2"><iframe src="https://www.djafer.com.br/wp-content/uploads/2020/06/Cata%CC%81logo-de-Produtos-Djafer.pdf" frameborder="0"></iframe></div></div>
+
+    </section>
 
 
 
