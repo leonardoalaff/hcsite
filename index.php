@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css13/style.css">
+    <link rel="stylesheet" href="css14/style.css">
     <link rel="stylesheet" href="css-mobile6/mobile.css">
 </head>
 <body>
@@ -184,8 +184,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     </form>
 </div>
 
+    <div class="box-s1">
+            <video src="css14/video2.mp4" autoplay muted loop></video>
+    <div class="gradiente"></div>
 
-    <header>
+        <header>
         <h1>CONTROLE DE ESTOQUE DETALHAMENTO</h1>
         <div class="abrir-menu">
             <div class="linha-menu"></div>
@@ -194,15 +197,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     </header>
 
     <main>
-        <section class="sessao1">
+        <section class="sessao1" id="carrossel">
 
-            <div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div>
+            <div class="box-card-avisos">
 
-            <div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div>
+                <div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div>
 
-            <div class="card-avisos card-avisos3"><h1>TUBOS</h1></div>
+                <div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div>
 
-            <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+                <div class="card-avisos card-avisos3"><h1>NOVA UNIDADE</h1></div>
+
+                <div class="card-avisos card-avisos4"><h1>ESTOQUE FILIAL</h1></div>
+
+                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+
+                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+
+
+            </div>
+            
 
         </section>
 
@@ -230,6 +247,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
          </div>
         
     </main>
+    </div>
 
 
 
@@ -295,6 +313,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript4/script.js"></script>
+    <script src="javascript5/script.js"></script>
 </body>
 </html>
