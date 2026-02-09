@@ -214,11 +214,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
                 <div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div>
 
-                <div class="card-avisos card-avisos3"><h1>NOVA UNIDADE</h1></div>
+                <div class="card-avisos card-avisos3"><h1>PAPEL IMPRESSORA</h1></div>
 
                 <div class="card-avisos card-avisos4"><h1>ESTOQUE FILIAL</h1></div>
 
-                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
+                <div class="card-avisos card-avisos5"><h1></h1>NOVA UNIDADE</div>
 
                 <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
                 <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
