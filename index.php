@@ -4,7 +4,17 @@ session_start();
 $arquivo = "sobras.json";
 
 // Lê as sobras existentes (ou cria uma lista vazia)
-$sobras = file_exists($arquivo) ? json_decode(file_get_contents($arquivo), true) : [];
+if (!file_exists($arquivo)) {
+    file_put_contents($arquivo, "[]");
+}
+
+$conteudo = file_get_contents($arquivo);
+$sobras = json_decode($conteudo, true);
+
+if (!is_array($sobras)) {
+    $sobras = [];
+}
+
 
 // Se o formulário foi enviado e não é requisição de remoção
 if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
@@ -74,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css14/style.css">
+    <link rel="stylesheet" href="css15/style.css">
     <link rel="stylesheet" href="css-mobile6/mobile.css">
 </head>
 <body>
@@ -128,7 +138,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <div class="form-row">
       <div class="form-group">
         <label for="espessura">Espessura</label>
-        <input type="float" name="espessura">
+        <input type="number" name="espessura" step="0.01">
+
       </div>
       <div class="form-group">
         <label for="largura">Dimensões</label>
@@ -171,7 +182,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 </div>
 
     <div class="box-s1">
-            <video src="css14/video2.mp4" autoplay muted loop></video>
+            <video id="bgVideo" src="css15/video5.mp4" autoplay muted></video>
+<div class="gradiente" id="gradiente"></div>
+
     <div class="gradiente"></div>
 
         <header>
@@ -202,7 +215,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any">
           </div>
 
-            <button class="btn-sobras" style='padding: 7px; position: relative; border-radius: 5px' type="submit">Buscar sobras</button> 
+            <button class="btn-sobras" style='border-radius: 5px' type="submit">Buscar sobras</button> 
         </form>
          </div>
         
@@ -218,7 +231,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
                 <div class="card-avisos card-avisos4"><h1>ESTOQUE FILIAL</h1></div>
 
-                <div class="card-avisos card-avisos5"><h1></h1>NOVA UNIDADE</div>
+                <div class="card-avisos card-avisos5"><h1>NOVA UNIDADE</h1></div>
 
                 <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
                 <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
@@ -228,6 +241,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
 
             </div>
+
+
+            <div class="scene">
+  <div class="estrutura" id="estrutura">
+    
+    <div class="viga horizontal"></div>
+    <div class="viga vertical esquerda"></div>
+    <div class="viga vertical direita"></div>
+    <div class="viga diagonal"></div>
+
+  </div>
+</div>
             
 
         </section>
@@ -313,6 +338,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript5/script.js"></script>
+    <script src="javascript6/script.js"></script>
 </body>
 </html>
