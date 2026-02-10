@@ -254,4 +254,3 @@ video.addEventListener("ended", () => {
     gradiente.style.background = "black";
     gradiente.style.transition = "2s";
 });
-

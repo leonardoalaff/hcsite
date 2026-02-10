@@ -1,0 +1,18 @@
+{
+    "Bicos": {
+        "quantidade": 0,
+        "minimo": 1
+    },
+    "Eletrodos": {
+        "quantidade": 0,
+        "minimo": 1
+    },
+    "Bocais": {
+        "quantidade": 0,
+        "minimo": 1
+    },
+    "Cerâmicas": {
+        "quantidade": 0,
+        "minimo": 1
+    }
+}

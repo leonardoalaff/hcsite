@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.alerta {
+    background: #ffcccc;
+}
+
+select, input, button {
+    padding: 8px;
+    margin: 5px;
+}
