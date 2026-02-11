@@ -2,43 +2,43 @@
     "Bicos": {
         "50": {
             "quantidade": 9,
-            "minimo": 2
+            "minimo": 1
         },
         "130": {
             "quantidade": 1,
-            "minimo": 2
+            "minimo": 1
         },
         "200": {
             "quantidade": 2,
-            "minimo": 2
+            "minimo": 1
         }
     },
     "Eletrodos": {
         "50": {
             "quantidade": 5,
-            "minimo": 2
+            "minimo": 1
         },
         "130": {
             "quantidade": 3,
-            "minimo": 2
+            "minimo": 1
         },
         "200": {
             "quantidade": 6,
-            "minimo": 2
+            "minimo": 1
         }
     },
     "Bocais": {
         "50": {
             "quantidade": 3,
-            "minimo": 2
+            "minimo": 1
         },
         "130": {
             "quantidade": 1,
-            "minimo": 2
+            "minimo": 1
         },
         "200": {
             "quantidade": 2,
-            "minimo": 2
+            "minimo": 1
         }
     },
     "Cer\u00e2micas": {

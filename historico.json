@@ -338,5 +338,33 @@
         "tipo": "entrada",
         "quantidade": 2,
         "data": "11\/02\/2026 16:34"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 3,
+        "data": "11\/02\/2026 16:38"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 3,
+        "data": "11\/02\/2026 16:39"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 4,
+        "data": "11\/02\/2026 16:39"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 4,
+        "data": "11\/02\/2026 16:40"
     }
 ]
