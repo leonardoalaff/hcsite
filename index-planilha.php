@@ -13,7 +13,7 @@ if (!is_array($dados)) $dados = [];
 <head>
 <meta charset="UTF-8">
 <title>Estoque CNC</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styleconsumiveis2.css">
 </head>
 <body>
 
@@ -39,8 +39,9 @@ if (!is_array($dados)) $dados = [];
 foreach ($dados as $item => $amps) {
     foreach ($amps as $amp => $info) {
 
-        $qtd = $info["quantidade"];
-        $min = $info["minimo"];
+        $qtd = isset($info["quantidade"]) ? $info["quantidade"] : 0;
+$min = isset($info["minimo"]) ? $info["minimo"] : 0;
+
         $alerta = ($qtd <= $min) ? "alerta" : "";
 
         echo "
@@ -84,7 +85,7 @@ foreach ($dados as $item => $amps) {
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script src="script.js"></script>
+<script src="scriptconsumiveis.js"></script>
 
 </body>
 </html>

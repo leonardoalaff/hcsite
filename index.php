@@ -227,7 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
                 <a href="index-planilha.php" class="link-planilhas"><div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div></a>
 
-                <div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div>
+                <a href="index-medicao.php" class="link-planilhas"><div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div></a>
 
                 <div class="card-avisos card-avisos3"><h1>PAPEL IMPRESSORA</h1></div>
 

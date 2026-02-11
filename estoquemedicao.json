@@ -1,0 +1,34 @@
+[
+    {
+        "tipo": "Trena",
+        "modelo": "5m",
+        "codigo": "5M",
+        "local": "DETALHAMENTO",
+        "status": "Disponivel",
+        "quantidade": 74
+    },
+    {
+        "tipo": "Trena",
+        "modelo": "15m",
+        "codigo": "15M",
+        "local": "DETALHAMENTO",
+        "status": "Disponivel",
+        "quantidade": 0
+    },
+    {
+        "tipo": "Trena",
+        "modelo": "25m",
+        "codigo": "25M",
+        "local": "DETALHAMENTO",
+        "status": "Disponivel",
+        "quantidade": 0
+    },
+    {
+        "tipo": "Trena",
+        "modelo": "30m",
+        "codigo": "30M",
+        "local": "DETALHAMENTO",
+        "status": "Disponivel",
+        "quantidade": 0
+    }
+]
