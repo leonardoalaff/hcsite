@@ -84,10 +84,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css15/style.css">
-    <link rel="stylesheet" href="css-mobile6/mobile.css">
+    <link rel="stylesheet" href="css17/style.css">
+    <link rel="stylesheet" href="css-mobile7/mobile.css">
 </head>
 <body>
+    <div class="tela-movel"><h1>VERSÃO MOBILE EM BREVE</h1></div>
+
     <div class="menu">
         <div class="menu-icon menu-icon-perfil">
             <h1 class="texto-menu texto-menu-perfil">Perfil</h1>
@@ -182,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 </div>
 
     <div class="box-s1">
-            <video id="bgVideo" src="css15/video5.mp4" autoplay muted></video>
+            <video id="bgVideo" src="css17/video5.mp4" autoplay muted></video>
 <div class="gradiente" id="gradiente"></div>
 
     <div class="gradiente"></div>
@@ -223,7 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
             <div class="box-card-avisos">
 
-                <div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div>
+                <a href="index-planilha.php" class="link-planilhas"><div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div></a>
 
                 <div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div>
 

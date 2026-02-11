@@ -1,3 +1,13 @@
+<?php
+$arquivo = "estoque.json";
+if (!file_exists($arquivo)) {
+    file_put_contents($arquivo, json_encode([], JSON_PRETTY_PRINT));
+}
+$dados = json_decode(file_get_contents($arquivo), true);
+if (!is_array($dados)) $dados = [];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,35 +17,40 @@
 </head>
 <body>
 
+<button onclick="window.location.href='index.php'" class="btn-voltar">
+    ⬅ Voltar
+</button>
+
+
 <h1>Controle de Estoque CNC</h1>
 
 <table>
 <thead>
 <tr>
     <th>Item</th>
+    <th>Amperes</th>
     <th>Quantidade</th>
     <th>Mínimo</th>
 </tr>
 </thead>
+
 <tbody>
 <?php
-$arquivo = "estoque.json";
+foreach ($dados as $item => $amps) {
+    foreach ($amps as $amp => $info) {
 
-if (!file_exists($arquivo)) {
-    file_put_contents($arquivo, json_encode([], JSON_PRETTY_PRINT));
-}
+        $qtd = $info["quantidade"];
+        $min = $info["minimo"];
+        $alerta = ($qtd <= $min) ? "alerta" : "";
 
-$dados = json_decode(file_get_contents($arquivo), true);
-if (!is_array($dados)) $dados = [];
-
-foreach ($dados as $item => $info) {
-    $alerta = ($info["quantidade"] <= $info["minimo"]) ? "alerta" : "";
-    echo "
-    <tr class='$alerta'>
-        <td>$item</td>
-        <td>{$info["quantidade"]}</td>
-        <td>{$info["minimo"]}</td>
-    </tr>";
+        echo "
+        <tr class='$alerta'>
+            <td>$item</td>
+            <td>{$amp}A</td>
+            <td>$qtd</td>
+            <td>$min</td>
+        </tr>";
+    }
 }
 ?>
 </tbody>
@@ -45,6 +60,12 @@ foreach ($dados as $item => $info) {
 
 <select id="item">
 <?php foreach ($dados as $item => $info) echo "<option>$item</option>"; ?>
+</select>
+
+<select id="amp">
+    <option value="50">50A</option>
+    <option value="130">130A</option>
+    <option value="200">200A</option>
 </select>
 
 <select id="tipo">
@@ -58,6 +79,12 @@ foreach ($dados as $item => $info) {
 <h2>Histórico</h2>
 <div id="historico"></div>
 
+<h2>Consumo por Amperagem</h2>
+<canvas id="graficoAmp" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="script.js"></script>
+
 </body>
 </html>

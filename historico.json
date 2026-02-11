@@ -58,5 +58,194 @@
         "tipo": "saida",
         "quantidade": 2,
         "data": "10\/02\/2026 16:48"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 2,
+        "data": "10\/02\/2026 23:46"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "10\/02\/2026 23:51"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 30,
+        "data": "10\/02\/2026 23:51"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 10,
+        "data": "10\/02\/2026 23:51"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "saida",
+        "quantidade": 15,
+        "data": "10\/02\/2026 23:51"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 7,
+        "data": "10\/02\/2026 23:52"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 6,
+        "data": "10\/02\/2026 23:52"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "10\/02\/2026 23:53"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 3,
+        "data": "10\/02\/2026 23:53"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 3,
+        "data": "10\/02\/2026 23:56"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 2,
+        "data": "10\/02\/2026 23:56"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 6,
+        "data": "10\/02\/2026 23:56"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 15,
+        "data": "11\/02\/2026 00:05"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:44"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:44"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:44"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Bocais",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Bocais",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Bocais",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Cer\u00e2micas",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Cer\u00e2micas",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Cer\u00e2micas",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 200,
+        "data": "11\/02\/2026 00:45"
+    },
+    {
+        "item": "Cer\u00e2micas",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 5,
+        "data": "11\/02\/2026 00:46"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 4,
+        "data": "11\/02\/2026 00:46"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 10,
+        "data": "11\/02\/2026 00:47"
     }
 ]
