@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css17/style.css">
+    <link rel="stylesheet" href="css19/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
 </head>
 <body>
@@ -114,6 +114,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             <div class="menu-icon menu-icon-add-sobra">
                 <h1 class="texto-menu texto-menu-add-sobra">Add Sobra</h1>
             </div>
+
+            <div class="container2">
+    <h1>📝 Lista de tarefas</h1>
+
+    <div class="input-area">
+      <input type="text" id="titulo" placeholder="Título da tarefa">
+      <textarea id="descricao" placeholder="Descrição..."></textarea>
+      <button onclick="adicionarLembrete()">Adicionar</button>
+    </div>
+
+    <div id="lista-lembretes"></div>
+  </div>
 
         <?php endif; ?>
 
@@ -184,13 +196,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 </div>
 
     <div class="box-s1">
-            <video id="bgVideo" src="css17/video5.mp4" autoplay muted></video>
+            <video id="bgVideo" src="css19/video5.mp4" autoplay muted></video>
 <div class="gradiente" id="gradiente"></div>
 
     <div class="gradiente"></div>
 
         <header>
-        <h1>CONTROLE DE ESTOQUE DETALHAMENTO</h1>
+        <h1></h1>
         <div class="abrir-menu">
             <div class="linha-menu"></div>
             <div class="linha-menu2"></div>
@@ -243,17 +255,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
 
             </div>
-
-
-            <div class="scene">
-  <div class="estrutura" id="estrutura">
-    
-    <div class="viga horizontal"></div>
-    <div class="viga vertical esquerda"></div>
-    <div class="viga vertical direita"></div>
-    <div class="viga diagonal"></div>
-
-  </div>
 </div>
             
 
@@ -309,6 +310,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
         <div id="boxiframe2"><iframe src="https://www.djafer.com.br/wp-content/uploads/2020/06/Cata%CC%81logo-de-Produtos-Djafer.pdf" frameborder="0"></iframe></div></div>
 
+
+
+
+
+            
     </section>
 
 
@@ -340,6 +346,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript6/script.js"></script>
+    <script src="javascript7/script.js"></script>
 </body>
 </html>

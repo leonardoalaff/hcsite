@@ -239,18 +239,136 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 
-tipoPerfil.addEventListener('click', () => {
-    perfilSelecionado = "detalhamento";
-    document.getElementById("perfil_escolhido").value = perfilSelecionado;
-    boxSenha.classList.add("active");
-});
 
+//************************          VÍDEO          *************************** */
 
 
 const video = document.getElementById("bgVideo");
 const gradiente = document.getElementById("gradiente");
 
 video.addEventListener("ended", () => {
-    gradiente.style.background = "black";
+    gradiente.style.backgroundImage = "url('javascript7/bg-logo.svg')";
+    gradiente.style.backgroundSize = "cover";
+    gradiente.style.backgroundPosition = "center";
+    gradiente.style.backgroundRepeat = "no-repeat";
     gradiente.style.transition = "2s";
+});
+
+
+//************************          VÍDEO          *************************** */
+
+
+
+
+
+
+
+
+
+
+let lembretes = [];
+
+// Carrega dados salvos ao abrir a página
+window.onload = function() {
+  const dados = localStorage.getItem("lembretes");
+  if (dados) {
+    lembretes = JSON.parse(dados);
+    renderizarLembretes();
+  }
+};
+
+function salvarNoLocalStorage() {
+  localStorage.setItem("lembretes", JSON.stringify(lembretes));
+}
+
+function adicionarLembrete() {
+  const titulo = document.getElementById("titulo").value;
+  const descricao = document.getElementById("descricao").value;
+
+  if (titulo === "") {
+    alert("Digite um título!");
+    return;
+  }
+
+  const novoLembrete = {
+    id: Date.now(),
+    titulo: titulo,
+    descricao: descricao,
+    concluido: false
+  };
+
+  lembretes.push(novoLembrete);
+  salvarNoLocalStorage();
+  renderizarLembretes();
+
+  document.getElementById("titulo").value = "";
+  document.getElementById("descricao").value = "";
+}
+
+function renderizarLembretes() {
+  const lista = document.getElementById("lista-lembretes");
+  lista.innerHTML = "";
+
+  lembretes.forEach(lembrete => {
+    const div = document.createElement("div");
+    div.className = "lembrete";
+    if (lembrete.concluido) {
+      div.classList.add("concluido");
+    }
+
+    div.innerHTML = `
+      <h3>${lembrete.titulo}</h3>
+      <p class="texto-lembrete">${lembrete.descricao}</p>
+      <div class="botoes">
+        <button class="concluir" onclick="toggleConcluido(${lembrete.id})">
+          ${lembrete.concluido ? "Desmarcar" : "Concluir"}
+        </button>
+        <button onclick="editarLembrete(${lembrete.id})">Editar</button>
+        <button class="excluir" onclick="excluirLembrete(${lembrete.id})">Excluir</button>
+      </div>
+    `;
+
+    lista.appendChild(div);
+  });
+}
+
+function toggleConcluido(id) {
+  lembretes = lembretes.map(lembrete => {
+    if (lembrete.id === id) {
+      lembrete.concluido = !lembrete.concluido;
+    }
+    return lembrete;
+  });
+
+  salvarNoLocalStorage();
+  renderizarLembretes();
+}
+
+function excluirLembrete(id) {
+  lembretes = lembretes.filter(lembrete => lembrete.id !== id);
+  salvarNoLocalStorage();
+  renderizarLembretes();
+}
+
+function editarLembrete(id) {
+  const lembrete = lembretes.find(l => l.id === id);
+
+  const novoTitulo = prompt("Editar título:", lembrete.titulo);
+  const novaDescricao = prompt("Editar descrição:", lembrete.descricao);
+
+  if (novoTitulo !== null && novaDescricao !== null) {
+    lembrete.titulo = novoTitulo;
+    lembrete.descricao = novaDescricao;
+
+    salvarNoLocalStorage();
+    renderizarLembretes();
+  }
+}
+
+
+const textarea = document.getElementById("descricao");
+
+textarea.addEventListener("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
 });
