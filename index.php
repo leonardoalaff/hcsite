@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css19/style.css">
+    <link rel="stylesheet" href="css20/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
 </head>
 <body>
@@ -196,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 </div>
 
     <div class="box-s1">
-            <video id="bgVideo" src="css19/video5.mp4" autoplay muted></video>
+            <video id="bgVideo" src="css20/video5.mp4" autoplay muted></video>
 <div class="gradiente" id="gradiente"></div>
 
     <div class="gradiente"></div>
@@ -279,6 +279,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <h1>FERRAMENTAS</h1>
 
+    <div class="bg-s-ferramentas">
+
     <div class="container">
     <h2>Conversor de Medidas</h2>
 
@@ -290,6 +292,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <div class="resultado" id="resultado"></div>
 </div>
+
+
+<div class="container3 normas-pintura">
+
+<h2>Normas de Pintura</h2>
+
+<input type="text" id="clientePintura" placeholder="Norma + cliente (ex: U21/20 - Usiminas)">
+<input type="text" id="fundoPintura" placeholder="Fundo">
+<input type="text" id="acabamentoPintura" placeholder="Acabamento">
+
+<button onclick="salvarNorma()">Salvar Norma</button>
+
+<select id="listaNormas" onchange="mostrarNorma()">
+    <option value="">Selecione uma norma</option>
+</select>
+
+<textarea id="normaSelecionada" readonly></textarea>
+
+<div class="btn-pintura">
+    <button onclick="copiarFundo()">Copiar Fundo</button>
+    <button onclick="copiarAcabamento()">Copiar Acabamento</button>
+</div>
+
+<button onclick="removerNorma()">Remover Norma</button>
+
+</div>
+
+
+</div>
+
 
     </section>
 
@@ -346,6 +378,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript7/script.js"></script>
+    <script src="javascript9/script.js"></script>
 </body>
 </html>
