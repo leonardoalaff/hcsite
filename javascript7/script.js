@@ -248,7 +248,7 @@ const gradiente = document.getElementById("gradiente");
 
 video.addEventListener("ended", () => {
     gradiente.style.backgroundImage = "url('javascript7/bg-logo.svg')";
-    gradiente.style.backgroundSize = "cover";
+    gradiente.style.backgroundSize = "contain";
     gradiente.style.backgroundPosition = "center";
     gradiente.style.backgroundRepeat = "no-repeat";
     gradiente.style.transition = "2s";
