@@ -378,6 +378,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript9/script.js"></script>
+    <script src="javascript10/script.js"></script>
 </body>
 </html>

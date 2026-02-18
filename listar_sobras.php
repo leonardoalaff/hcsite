@@ -54,7 +54,7 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="css7/estilo.css">
+    <link rel="stylesheet" href="css8/estilo.css">
     <link rel="stylesheet" href="css-mobile6/mobile2.css">
 </head>
 <body>

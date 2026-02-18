@@ -11,33 +11,47 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #121212;
+    background-color: #f4f6f8;
     color: #ccc;
 }
 
 h2 {
-    color: #ccc;
+    color: #1E1E1E;
 }
 
 .sobra-card {
     display: inline-table;
-    width: 25%;
-    height: 10vh;
+    position: relative;
+    width: 250px;
+    height: 200px;
     padding: 15px;
     margin-top: 100px;
     margin-bottom: 15px;
     margin-left: 3%;
-    border: 1px solid #ccc;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
     border-radius: 8px;
-    background-color: #1E1E1E;
-    color: #ccc;
-    transition: 0.2s;
+    background-color: white;
+    color: gray;
+    overflow: hidden;
 }
 .sobra-card:hover {
-    border: 1px solid #f95d6a;
     cursor: pointer;
-    transition: 0.2s;
 }
+.sobra-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #2563EB;
+    transition: 0.1s;
+}
+.sobra-card:hover::before {
+    width: 5px;
+}
+
+
 
 .sobra-card img {
     margin-top: 10px;
@@ -50,21 +64,26 @@ h2 {
 }
 
 .remover-btn {
-    background-color: rgb(153, 4, 4);
+    background-color: rgb(194, 0, 0);
     color: white;
     margin-bottom: 20px;
     border: none;
-    padding: 3px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .reservar-toggle-btn {
     width: 90%;
-    background-color: #007fc7;
+    background-color: #2563EB;
+    padding: 5px;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 5%;
+    border: none;
+}
+.reservar-toggle-btn:hover {
+    background-color: #0056b3;
 }
 .input-reservar-sobra {
     margin-bottom: 5px;
@@ -79,13 +98,17 @@ h2 {
     color: white;
     padding: 5px;
     border-radius: 5px;
+    border: none;
+}
+.reservar-btn:hover{
+    cursor: pointer;
 }
 
 .t-sobras-encontradas {
 }
 
 .voltar-btn {
-    background-color: #f95d6a;
+    background-color: #2563EB;
     position: fixed;
     left: 90%;
     top: -0.5vh;
@@ -123,7 +146,7 @@ body.no-scroll {
 
 .editar-btn {
     font-weight: bolder;
-    color: white;
+    color: gray;
     text-decoration: none;
     transition: 0.3s;
 }

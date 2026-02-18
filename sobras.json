@@ -44,7 +44,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0005",
@@ -88,7 +89,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0009",
@@ -110,7 +112,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0011",
@@ -121,6 +124,7 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     }
 ]
