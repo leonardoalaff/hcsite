@@ -507,5 +507,19 @@
         "tipo": "saida",
         "quantidade": 1,
         "data": "17\/02\/2026 21:55"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "130",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "23\/02\/2026 21:08"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "23\/02\/2026 22:30"
     }
 ]

@@ -11,7 +11,8 @@
         "imagem": "uploads\/1769994067_ChatGPT Image 26 de jan. de 2026, 00_20_53.png",
         "reservada": true,
         "reservada_por": "detalhamento",
-        "codigo_projeto": "HC251463"
+        "codigo_projeto": "HC251463",
+        "oculta": true
     },
     {
         "codigo": "0002",
@@ -22,7 +23,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0003",
@@ -33,7 +35,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0004",
@@ -56,7 +59,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0006",
@@ -67,7 +71,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0007",
@@ -78,7 +83,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0008",
@@ -101,7 +107,8 @@
         "comprimento": "",
         "material": "",
         "localizacao": "",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0010",
@@ -125,6 +132,29 @@
         "material": "",
         "localizacao": "",
         "imagem": "",
+        "oculta": true
+    },
+    {
+        "codigo": "0012",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA #6,35",
+        "espessura": "6.35",
+        "largura": "220 X 2000",
+        "comprimento": "27",
+        "material": "ASTM A36",
+        "localizacao": "EM FRENTE À MESA DO GENIM",
+        "imagem": "uploads\/1771866498_SOBRA #6.jpeg"
+    },
+    {
+        "codigo": "0013",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA #6,35",
+        "espessura": "6.35",
+        "largura": "220 X 2000",
+        "comprimento": "",
+        "material": "ASTM A36",
+        "localizacao": "EM FRENTE À MESA DO GENIM",
+        "imagem": "uploads\/1771867868_SOBRA #6.jpeg",
         "oculta": true
     }
 ]
