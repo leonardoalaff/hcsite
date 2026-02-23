@@ -181,6 +181,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
       <input class="escolher-arquivo" type="file" name="imagem">
     </div>
 
+
+
+<div style="background:#111;padding:10px;border-radius:8px;color:white;">
+<h3>Desenho Técnico CAD</h3>
+
+<input id="cmd" placeholder="X 1000" onkeydown="if(event.key==='Enter'){event.preventDefault(); executarComando();}">
+<button type="button" onclick="executarComando()">
+<button onclick="novoProjeto()">Novo</button>
+
+<p id="cadInfo"></p>
+
+<canvas id="cadCanvas" width="1050" height="400" style="border:2px solid #555;background:#000;"></canvas>
+</div>
+
+
+
+
+
     <input type="submit" value="Adicionar sobra">
   </form>
 </div>
@@ -366,6 +384,76 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
 
 
+
+
+
+
+
+
+<script>
+const canvas = document.getElementById("cadCanvas");
+const ctx = canvas.getContext("2d");
+
+let escala = 0.07; // 1px = 1mm
+let pontos = [{x:100,y:200}]; // ponto inicial
+
+function desenhar(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.beginPath();
+    ctx.moveTo(pontos[0].x, pontos[0].y);
+
+    for(let i=1;i<pontos.length;i++){
+        ctx.lineTo(pontos[i].x, pontos[i].y);
+    }
+
+    ctx.strokeStyle="lime";
+    ctx.lineWidth=2;
+    ctx.stroke();
+}
+
+function executarComando(){
+    let c = document.getElementById("cmd").value.trim().toUpperCase();
+    let p = pontos[pontos.length-1];
+
+    let partes = c.split(" ");
+
+    if(partes[0]=="X"){
+        let dx = parseFloat(partes[1]);
+        pontos.push({x:p.x+dx*escala, y:p.y});
+    }
+
+    if(partes[0]=="Y"){
+        let dy = parseFloat(partes[1]);
+        pontos.push({x:p.x, y:p.y-dy*escala});
+    }
+
+    if(partes[0]=="ANG"){
+        let ang = parseFloat(partes[1]) * Math.PI/180;
+        let comp = parseFloat(partes[2]);
+        pontos.push({
+            x: p.x + Math.cos(ang)*comp*escala,
+            y: p.y - Math.sin(ang)*comp*escala
+        });
+    }
+
+    desenhar();
+}
+
+function novoProjeto(){
+    pontos = [{x:100,y:200}];
+    desenhar();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
     <script>
     document.querySelectorAll('.reservar-toggle-btn').forEach(botao => {
         botao.addEventListener('click', () => {
@@ -378,6 +466,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript10/script.js"></script>
+    <script src="javascript12/script.js"></script>
 </body>
 </html>
