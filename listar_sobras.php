@@ -54,8 +54,9 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="css8/estilo.css">
+    <link rel="stylesheet" href="css9/estilo.css">
     <link rel="stylesheet" href="css-mobile6/mobile2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <h2 class="t-sobras-encontradas">Sobras Encontradas:</h2>
@@ -64,13 +65,15 @@ header('Content-Type: text/html; charset=utf-8');
         <?php foreach ($sobras_filtradas as $sobra): ?>
             <div class="sobra-card">
                 Código: <strong><?= htmlspecialchars($sobra["codigo"]) ?></strong><br>
-                Tipo: <strong><?= isset($sobra["tiposobra"]) && $sobra["tiposobra"] === "irregular" ? "Sobra irregular" : "Sobra regular" ?></strong><br>
                 Descrição: <strong><?= htmlspecialchars($sobra["descricao"]) ?></strong><br>
-                Espessura: <strong>#<?= htmlspecialchars($sobra["espessura"]) ?></strong><br>
                 Dimensões: <strong><?= htmlspecialchars($sobra["largura"]) ?></strong><br>
-                Quantidade: <strong><?= htmlspecialchars($sobra["comprimento"]) ?>un.</strong><br>
-               Material: <strong><?= htmlspecialchars($sobra["material"]) ?></strong><br>
+                Material: <strong><?= htmlspecialchars($sobra["material"]) ?></strong><br>
                 Localização: <strong><?= htmlspecialchars($sobra["localizacao"]) ?></strong><br>
+                Quantidade: <strong><?= htmlspecialchars($sobra["comprimento"]) ?>un.</strong><br>
+                Tipo: <strong><?= isset($sobra["tiposobra"]) && $sobra["tiposobra"] === "irregular" ? "Sobra irregular" : "Sobra regular" ?></strong><br>
+                <div class="espessura">#<?= htmlspecialchars($sobra["espessura"]) ?></div>
+
+
 
                 <?php if (!empty($sobra["imagem"])): ?>
                     <img src="<?= htmlspecialchars($sobra["imagem"]) ?>" alt="Imagem da sobra" class="sobra-img">
@@ -101,27 +104,25 @@ if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
 
 <?php if ($perfil === 'detalhamento' || $perfil === 'encarregado'): ?>
 
-    <!-- Botão de Editar -->
-    <a href="editar_sobra.php?id=<?= htmlspecialchars($sobra["codigo"]) ?>" class="editar-btn">Editar</a>
-<?php endif; ?>
+    <div class="acoes-sobra">
+        <!-- Botão de Editar -->
+        <a href="editar_sobra.php?id=<?= htmlspecialchars($sobra["codigo"]) ?>" class="editar-btn"><i class="fa-solid fa-pen-to-square"></i></a>
+        <?php endif; ?>
 
-
-
-
-
-    <form method="POST" style="margin-top:10px;">
-        <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
-        <button type="submit" class="remover-btn">Remover sobra</button>
-    </form>
+        <form method="POST" style="margin-top:10px;">
+            <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
+            <button type="submit" class="remover-btn"><i class="fa-solid fa-trash-can"></i></button>
+        </form>
+    </div>
 
     <!-- Botão de reservar -->
-    <button type="button" class="reservar-toggle-btn" data-codigo="<?= htmlspecialchars($sobra["codigo"]) ?>">Reservar sobra</button>
+    <button type="button" class="reservar-toggle-btn" data-codigo="<?= htmlspecialchars($sobra["codigo"]) ?>"><i class="fa-solid fa-bookmark"></i> Reservar sobra</button>
 
     <!-- Formulário de reserva -->
     <form method="POST" action="reservar_sobra.php" class="form-reserva" id="form-<?= htmlspecialchars($sobra["codigo"]) ?>" style="display:none; margin-top:5px;">
         <input class="input-reservar-sobra" type="hidden" name="codigo_reserva" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
         <input class="input-reservar-sobra" type="text" name="codigo_projeto" placeholder="Código do projeto" required>
-        <button type="submit" class="reservar-btn">Confirmar reserva</button>
+        <button type="submit" class="reservar-btn"><i class="fa-solid fa-check"></i></button>
     </form>
 <?php endif; ?>
 

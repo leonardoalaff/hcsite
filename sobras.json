@@ -726,5 +726,20 @@
         "localizacao": "",
         "imagem": "",
         "oculta": true
+    },
+    {
+        "codigo": "0062",
+        "tiposobra": "sobraregular",
+        "descricao": "xdaxa",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "detalhamento",
+        "codigo_projeto": "hc252613",
+        "oculta": true
     }
 ]

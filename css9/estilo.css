@@ -26,29 +26,20 @@ h2 {
     height: 200px;
     padding: 15px;
     margin-top: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 100px;
     margin-left: 3%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
     border-radius: 8px;
     background-color: white;
     color: gray;
     overflow: hidden;
+    line-height: 1.6;
 }
 .sobra-card:hover {
     cursor: pointer;
 }
-.sobra-card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: #2563EB;
-    transition: 0.1s;
-}
-.sobra-card:hover::before {
-    width: 5px;
+
+.sobra-card:hover .espessura {
 }
 
 
@@ -64,44 +55,80 @@ h2 {
 }
 
 .remover-btn {
-    background-color: rgb(194, 0, 0);
+    background: rgb(194, 0, 0);
     color: white;
     margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
     border: none;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: 0.2s;
+}
+.remover-btn:hover {
+background: black;
+transform: scale(1.1);
+transition: 0.2s;
+}
+
+.remover-btn i {
+    color: white;
+    font-size: 18px;
 }
 
 .reservar-toggle-btn {
-    width: 90%;
-    background-color: #2563EB;
-    padding: 5px;
+    width: 100%;
+    background: linear-gradient(135deg, #16a34a, #15803d);
     color: white;
-    border-radius: 5px;
-    margin-left: 5%;
     border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 .reservar-toggle-btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #15803d, #166534);
+    transform: scale(1.05);
 }
 .input-reservar-sobra {
-    margin-bottom: 5px;
     width: 90%;
-    margin-left: 5%;
-    border-radius: 5px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s;
+    background-color: #f9fafb;
+    margin-bottom: 10px;
+}
+.input-reservar-sobra:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    background-color: white;
 }
 .reservar-btn {
-    width: 70%;
-    margin-left: 15%;
-    background-color: green;
+    background-color: #4b4b4b;
     color: white;
-    padding: 5px;
-    border-radius: 5px;
     border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    left: calc(50% - 15px);
+    transition: 0.2s;
 }
 .reservar-btn:hover{
-    cursor: pointer;
+    background: #16a34a;
+    transform: scale(1.15);
 }
 
 .t-sobras-encontradas {
@@ -145,14 +172,13 @@ body.no-scroll {
 
 
 .editar-btn {
-    font-weight: bolder;
     color: gray;
-    text-decoration: none;
-    transition: 0.3s;
+    font-size: 18px;
+    transition: 0.2s;
 }
 .editar-btn:hover {
-    text-decoration: underline;
-    transition: 0.3s;
+    color: #2563EB;
+    transform: scale(1.2);
 }
 
 .box-editar-sobra {
@@ -200,5 +226,28 @@ body.no-scroll {
     font-size: 1em;
     border-radius: 5px;
 }
+
+.espessura {
+    background-color: #4b4b4b;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.acoes-sobra {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
 
 }
