@@ -741,5 +741,27 @@
         "reservada_por": "detalhamento",
         "codigo_projeto": "hc252613",
         "oculta": true
+    },
+    {
+        "codigo": "0063",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA #31,75",
+        "espessura": "31.75",
+        "largura": "355 X 510",
+        "comprimento": "7",
+        "material": "ASTM A36",
+        "localizacao": "PÁTIO, 4° PILHA, À DIREITA",
+        "imagem": "uploads\/1772138691_32.jpeg"
+    },
+    {
+        "codigo": "0064",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA #6,35",
+        "espessura": "6.35",
+        "largura": "1500 X 3100",
+        "comprimento": "55",
+        "material": "SAC 350",
+        "localizacao": "EM FRENTE O DETALHAMENTO",
+        "imagem": "uploads\/1772138767_6 SAC 350.jpeg"
     }
 ]
