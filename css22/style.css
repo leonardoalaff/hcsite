@@ -1073,3 +1073,11 @@ textarea {
     transition: all 0.3s ease;
 }
 
+
+.submenu {
+    display: none;
+}
+
+.menu:hover .submenu {
+    display: flex;
+}

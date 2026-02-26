@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
         <div class="menu-icon menu-icon-perfil" id="menuConta">
     <h1 class="texto-menu texto-menu-perfil">Conta</h1>
 
-    <div class="card-perfis" id="dropdownConta">
+    <div class="card-perfis submenu" id="dropdownConta">
 
         <div class="box-conta" onclick="window.location.href='registrar.php'">
             <i class="fa-solid fa-user-plus icone-conta"></i>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$erro = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -9,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuarios = json_decode(file_get_contents("usuarios.json"), true);
 
     foreach ($usuarios as $u) {
-
         if ($u['usuario'] === $usuario && password_verify($senha, $u['senha'])) {
 
             $_SESSION['usuario'] = $u['usuario'];
@@ -20,17 +20,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    echo "Usuário ou senha inválidos.";
+    $erro = "Usuário ou senha inválidos.";
 }
 ?>
 
-<form method="POST">
-    <h2>Login</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
 
-    <input type="text" name="usuario" placeholder="Usuário"><br><br>
-    <input type="password" name="senha" placeholder="Senha"><br><br>
+<div class="auth-container">
+    <h2>Bem-vindo</h2>
 
-    <button type="submit">Entrar</button>
-</form>
+    <?php if($erro): ?>
+        <div class="error"><?= $erro ?></div>
+    <?php endif; ?>
 
-<a href="registrar.php">Criar nova conta</a>
+    <form method="POST">
+        <input type="text" name="usuario" placeholder="Usuário" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <a href="registrar.php">Criar nova conta</a>
+</div>
+
+</body>
+</html>
