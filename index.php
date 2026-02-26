@@ -84,29 +84,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css21/style.css">
+    <link rel="stylesheet" href="css22/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div class="tela-movel"><h1>VERSÃO MOBILE EM BREVE</h1></div>
 
     <div class="menu">
-        <div class="menu-icon menu-icon-perfil">
-            <h1 class="texto-menu texto-menu-perfil">Perfil</h1>
-            <div class="card-perfis">
-                <div class='box-conta'>
-                    <h2 class="tipo-perfil1 tipo-perfil">Detalhamento</h2>
-                </div>
+        <div class="menu-icon menu-icon-perfil" id="menuConta">
+    <h1 class="texto-menu texto-menu-perfil">Conta</h1>
 
-                <div class='box-conta'>
-                    <h2 class="tipo-perfil2 tipo-perfil">Encarregado</h2>
-                </div>
+    <div class="card-perfis" id="dropdownConta">
 
-                <div class='box-conta'>
-                    <h2 class="tipo-perfil3 tipo-perfil">Operador</h2>
-                </div>
-            </div>
+        <div class="box-conta" onclick="window.location.href='registrar.php'">
+            <i class="fa-solid fa-user-plus icone-conta"></i>
+            <h2 class="tipo-perfil">Criar nova conta</h2>
         </div>
+
+        <div class="box-conta" onclick="window.location.href='login.php'">
+            <i class="fa-solid fa-right-to-bracket icone-conta"></i>
+            <h2 class="tipo-perfil">Logar</h2>
+        </div>
+
+    </div>
+</div>
 
         <?php
         $perfil = $_SESSION['perfil'] ?? 'visitante';
@@ -385,6 +387,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     });
 </script>
 
-    <script src="javascript12/script.js"></script>
+    <script src="javascript13/script.js"></script>
 </body>
 </html>

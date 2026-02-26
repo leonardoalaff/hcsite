@@ -2,28 +2,35 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $perfil = $_POST['perfil'];
-    $senha = $_POST['senha'];
 
-    if ($perfil === 'detalhamento' && $senha === '1234') {
-        $_SESSION['perfil'] = 'detalhamento';
-        header('Location: index.php');
-        exit;
+    $usuario = trim($_POST['usuario']);
+    $senha = trim($_POST['senha']);
+
+    $usuarios = json_decode(file_get_contents("usuarios.json"), true);
+
+    foreach ($usuarios as $u) {
+
+        if ($u['usuario'] === $usuario && password_verify($senha, $u['senha'])) {
+
+            $_SESSION['usuario'] = $u['usuario'];
+            $_SESSION['perfil'] = $u['perfil'];
+
+            header('Location: index.php');
+            exit;
+        }
     }
 
-    if ($perfil === 'encarregado' && $senha === '12345') {
-        $_SESSION['perfil'] = 'encarregado';
-        header('Location: index.php');
-        exit;
-    }
-
-    if ($perfil === 'operador' && $senha === '123') {
-        $_SESSION['perfil'] = 'operador';
-        header('Location: index.php');
-        exit;
-    }
-
-    $_SESSION['perfil'] = 'visitante';
-    header('Location: index.php');
-    exit;
+    echo "Usuário ou senha inválidos.";
 }
+?>
+
+<form method="POST">
+    <h2>Login</h2>
+
+    <input type="text" name="usuario" placeholder="Usuário"><br><br>
+    <input type="password" name="senha" placeholder="Senha"><br><br>
+
+    <button type="submit">Entrar</button>
+</form>
+
+<a href="registrar.php">Criar nova conta</a>

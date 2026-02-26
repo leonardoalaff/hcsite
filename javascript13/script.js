@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardAddSobra = document.querySelector('.card-add-sobra');
     const fecharCardSobra = document.querySelector('.fechar-card-sobra');
     const cardPerfis = document.querySelector('.card-perfis');
-    const menuIconAddSobra = document.querySelector('.menu-icon-add-sobra');
     const menuIconPerfil = document.querySelector('.menu-icon-perfil');
     const tipoPerfil = document.querySelector('.tipo-perfil');
     const tipoPerfil2 = document.querySelector('.tipo-perfil2');
@@ -17,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const linhaMenu = document.querySelector('.linha-menu');
     const linhaMenu2 = document.querySelector('.linha-menu2');
     const menu = document.querySelector('.menu');
+    const btnConta = document.getElementById("btnConta");
+    const container2 = document.querySelector('.container2');
+
+
+    
     
 
     abrirMenu.addEventListener('click', () => {
@@ -24,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
         linhaMenu.classList.toggle('active')
         linhaMenu2.classList.toggle('active')
         abrirMenu.classList.toggle('active')
+})
+
+
+
+menuConta.addEventListener("click", () => {
+iconAddSobra.classList.toggle("activo")
+container2.classList.toggle("active")
 })
 
     menuIconPerfil.addEventListener('click', () => {
@@ -459,3 +470,21 @@ function removerNorma() {
 
 // carregar lista
 atualizarLista();
+
+
+
+
+
+
+
+
+const menuConta = document.getElementById("menuConta");
+const dropdown = document.getElementById("dropdownConta");
+
+menuConta.addEventListener("click", () => {
+    dropdown.classList.toggle("ativo");
+});
+
+
+
+

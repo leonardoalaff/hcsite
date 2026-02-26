@@ -55,6 +55,7 @@ body {
     display: block;
 }
 
+
 .menu-icon {
     width: 2vw;
     height: 2vW;
@@ -81,18 +82,6 @@ body {
 .abrir-menu {
     display: none;
 }
-
-.card-perfis {
-    display: none;
-    width: 1200%;
-    position: relative;
-    left: 650%;
-    top: -5vh;
-    padding: 20px;
-    box-shadow: 0 0 10px black;
-    transition: 0.5s;
-    border: 1px solid white;
-}
 .box-conta {
     margin-bottom: 20px;
     background-color: transparent;
@@ -104,21 +93,6 @@ body {
     font-size: 15px;
     transition: 0.2s;
 }
-.tipo-perfil:hover, .tipo-perfil2:hover, .tipo-perfil3:hover {
-    text-decoration: underline 1px;
-    text-underline-offset: 10px;
-    font-weight: bolder;
-    font-size: 18px;
-    transition: 0.2s;
-}
-
-.menu-icon-perfil:hover > .card-perfis {
-    display: block;
-    background-color: #1E1E1E;
-    transition: 0.5s;
-}
-
-
 
 .box-senha {
     background-color: #121212;
@@ -176,13 +150,15 @@ body {
 
 .menu-icon-add-sobra {
     position: relative;
-    top: 10vh;
+    top: 10%;
     background: url('https://icons.veryicon.com/png/o/healthcate-medical/medical-icon-multi-color/plus-63.png');
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.3s;
 }
-.menu-icon-add-sobra.active {
-    display: none;
+.menu-icon-add-sobra.activo {
+    top: 20%;
+    transition: 0.3s;
 }
 
 .texto-menu {
@@ -869,6 +845,12 @@ iframe {
   border-radius: 10px;
   border: 1px solid white;
   color: white;
+  transition: 0.3s;
+}
+
+.container2.active {
+  top: 30%;
+  transition: 0.3s;
 }
 
 .container2 h1 {
@@ -1020,3 +1002,74 @@ textarea {
 .normas-pintura button:hover {
     background: #0056b3;
 }
+
+
+
+
+
+
+
+
+
+.box-conta {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    width: 90px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding: 5px;
+}
+
+.box-conta:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.icone-conta {
+    font-size: 15px;
+    margin: 15px;
+}
+
+.tipo-perfil {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.menu-icon-perfil {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Dropdown escondido */
+.card-perfis {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+}
+
+/* Quando abrir */
+.card-perfis.ativo {
+    max-height: 500px; /* altura suficiente */
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
