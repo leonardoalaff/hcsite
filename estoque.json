@@ -5,7 +5,7 @@
             "minimo": 1
         },
         "130": {
-            "quantidade": 0,
+            "quantidade": 4,
             "minimo": 1
         },
         "200": {
@@ -19,7 +19,7 @@
             "minimo": 1
         },
         "130": {
-            "quantidade": 1,
+            "quantidade": 4,
             "minimo": 1
         },
         "200": {
@@ -51,7 +51,7 @@
             "minimo": 1
         },
         "200": {
-            "quantidade": 1,
+            "quantidade": 2,
             "minimo": 1
         }
     }
