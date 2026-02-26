@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Editar Sobra</title>
-    <link rel="stylesheet" href="css7/estilo.css">
+    <link rel="stylesheet" href="css10/estilo.css">
     <link rel="stylesheet" href="css-mobile6/mobile2.css">
 </head>
 <body class="corpo-editar">

@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css20/style.css">
+    <link rel="stylesheet" href="css21/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
 </head>
 <body>
@@ -196,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 </div>
 
     <div class="box-s1">
-            <video id="bgVideo" src="css20/video5.mp4" autoplay muted></video>
+            <video id="bgVideo" src="css21/video5.mp4" autoplay muted></video>
 <div class="gradiente" id="gradiente"></div>
 
     <div class="gradiente"></div>
