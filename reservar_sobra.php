@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['perfil']) || !in_array($_SESSION['perfil'], ['detalhamento', 'encarregado'])) {
+if (!isset($_SESSION['usuario'])) {
     header('Location: index.php');
     exit;
 }

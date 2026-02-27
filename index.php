@@ -223,8 +223,6 @@ if (isset($_SESSION['usuario'])) {
 </div>
 
     <div class="box-s1">
-            <video id="bgVideo" src="css21/video5.mp4" autoplay muted></video>
-<div class="gradiente" id="gradiente"></div>
 
 
 

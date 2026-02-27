@@ -179,7 +179,8 @@
         "comprimento": "27",
         "material": "ASTM A36",
         "localizacao": "EM FRENTE À MESA DO GENIM",
-        "imagem": "uploads\/1771883877_SOBRA6.jpeg"
+        "imagem": "uploads\/1771883877_SOBRA6.jpeg",
+        "oculta": true
     },
     {
         "codigo": "0016",

@@ -38,24 +38,7 @@ container2.classList.toggle("active")
         cardPerfis.classList.toggle('active')
     })
 
-    // Perfil selecionado
-    tipoPerfil.addEventListener('click', () => {
-        perfilSelecionado = "detalhamento";
-        document.getElementById("perfil_escolhido").value = perfilSelecionado;
-        boxSenha.style.display = "block";
-    });
-
-    tipoPerfil2.addEventListener('click', () => {
-        perfilSelecionado = "encarregado";
-        document.getElementById("perfil_escolhido").value = perfilSelecionado;
-        boxSenha.style.display = "block";
-    });
-
-    tipoPerfil3.addEventListener('click', () => {
-        perfilSelecionado = "operador";
-        document.getElementById("perfil_escolhido").value = perfilSelecionado;
-        boxSenha.style.display = "block";
-    });
+    
 
   
     // Ações de exibir/esconder card de sobra
