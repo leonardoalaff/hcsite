@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $erro = "Usuário ou senha inválidos.";
 }
+
 ?>
 
 <!DOCTYPE html>

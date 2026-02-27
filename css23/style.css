@@ -86,13 +86,6 @@ body {
     margin-bottom: 20px;
     background-color: transparent;
 }
-.tipo-perfil, .tipo-perfil2, .tipo-perfil3 {
-    background-color: transparent;
-    color: #E0E0E0;
-    font-weight: lighter;
-    font-size: 15px;
-    transition: 0.2s;
-}
 
 .box-senha {
     background-color: #121212;
@@ -1041,6 +1034,7 @@ textarea {
 .tipo-perfil {
     font-size: 15px;
     font-weight: 600;
+    color: white;
 }
 
 .menu-icon-perfil {
@@ -1080,4 +1074,30 @@ textarea {
 
 .menu:hover .submenu {
     display: flex;
+}
+
+
+.nome-conta {
+    display: none;
+    position: relative;
+    left: 150%;
+    top: 20%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+
+.menu:hover  .nome-conta {
+    display: block;
+}
+
+
+.excluir-conta {
+    color: #ff4d4d;
+}
+
+.excluir-conta:hover {
+    background: #2a0000;
 }

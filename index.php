@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css22/style.css">
+    <link rel="stylesheet" href="css23/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -93,26 +93,52 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <div class="menu">
         <div class="menu-icon menu-icon-perfil" id="menuConta">
-    <h1 class="texto-menu texto-menu-perfil">Conta</h1>
+
+    <span class="nome-conta">
+<?php
+if (isset($_SESSION['usuario'])) {
+    echo $_SESSION['usuario'];
+} else {
+    echo "Conta";
+}
+?>
+</span>
 
     <div class="card-perfis submenu" id="dropdownConta">
 
-        <div class="box-conta" onclick="window.location.href='registrar.php'">
-            <i class="fa-solid fa-user-plus icone-conta"></i>
-            <h2 class="tipo-perfil">Criar nova conta</h2>
-        </div>
 
-        <div class="box-conta" onclick="window.location.href='login.php'">
-            <i class="fa-solid fa-right-to-bracket icone-conta"></i>
-            <h2 class="tipo-perfil">Logar</h2>
-        </div>
+<?php if (!isset($_SESSION['usuario'])): ?>
 
+    <div class="box-conta" onclick="window.location.href='registrar.php'">
+        <i class="fa-solid fa-user-plus icone-conta"></i>
+        <h2 class="tipo-perfil">Criar nova conta</h2>
     </div>
+
+    
+
+    <div class="box-conta" onclick="window.location.href='login.php'">
+        <i class="fa-solid fa-right-to-bracket icone-conta"></i>
+        <h2 class="tipo-perfil">Logar</h2>
+    </div>
+
+<?php else: ?>
+
+    <div class="box-conta" onclick="window.location.href='logout.php'">
+        <i class="fa-solid fa-right-from-bracket icone-conta"></i>
+        <h2 class="tipo-perfil">Sair</h2>
+    </div>
+
+    <div class="box-conta excluir-conta" onclick="confirmarExclusao()">
+        <i class="fa-solid fa-trash icone-conta"></i>
+        <h2 class="tipo-perfil">Excluir Conta</h2>
+    </div>
+
+<?php endif; ?>
+
+</div>
 </div>
 
-        <?php
-        $perfil = $_SESSION['perfil'] ?? 'visitante';
-        if ($perfil === 'detalhamento' || $perfil === 'encarregado'): ?>
+        
             <div class="menu-icon menu-icon-add-sobra">
                 <h1 class="texto-menu texto-menu-add-sobra">Add Sobra</h1>
             </div>
@@ -128,8 +154,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <div id="lista-lembretes"></div>
   </div>
-
-        <?php endif; ?>
 
     </div>
 
@@ -385,6 +409,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
             }
         });
     });
+</script>
+
+<script>
+function confirmarExclusao() {
+    if (confirm("Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.")) {
+        window.location.href = "excluir_conta.php";
+    }
+}
 </script>
 
     <script src="javascript13/script.js"></script>

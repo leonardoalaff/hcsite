@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const fecharCardSobra = document.querySelector('.fechar-card-sobra');
     const cardPerfis = document.querySelector('.card-perfis');
     const menuIconPerfil = document.querySelector('.menu-icon-perfil');
-    const tipoPerfil = document.querySelector('.tipo-perfil');
-    const tipoPerfil2 = document.querySelector('.tipo-perfil2');
-    const tipoPerfil3 = document.querySelector('.tipo-perfil3');
     const boxSenha = document.querySelector('.box-senha');
     const btnEntrar = document.querySelector('#btnEntrar'); // Adicione o ID no botão no HTML
     const campoSenha = document.querySelector('#campoSenha'); // Adicione o ID no campo de senha
