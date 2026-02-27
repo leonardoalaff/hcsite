@@ -6,11 +6,7 @@ $arquivo = "sobras.json";
 $sobras = file_exists($arquivo) ? json_decode(file_get_contents($arquivo), true) : [];
 
 // Processa ocultação, se houver
-if (
-    $_SERVER['REQUEST_METHOD'] === 'POST' &&
-    isset($_POST['ocultar_codigo']) &&
-    isset($_SESSION['usuario'])
-) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ocultar_codigo'])) {
     $codigo_ocultar = $_POST['ocultar_codigo'];
 
     foreach ($sobras as &$sobra) {
@@ -96,15 +92,22 @@ header('Content-Type: text/html; charset=utf-8');
     <?php endif; ?>
 
 
-                <?php if (isset($_SESSION['usuario'])): ?>
+                <?php
+$perfil = $_SESSION['perfil'] ?? 'visitante';
+if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
+?>
+    <?php
+$perfil = $_SESSION['perfil'] ?? 'visitante';
+if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
+?>
 
 
-
+<?php if ($perfil === 'detalhamento' || $perfil === 'encarregado'): ?>
 
     <div class="acoes-sobra">
         <!-- Botão de Editar -->
         <a href="editar_sobra.php?id=<?= htmlspecialchars($sobra["codigo"]) ?>" class="editar-btn"><i class="fa-solid fa-pen-to-square"></i></a>
-        
+        <?php endif; ?>
 
         <form method="POST" style="margin-top:10px;">
             <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
@@ -121,7 +124,7 @@ header('Content-Type: text/html; charset=utf-8');
         <input class="input-reservar-sobra" type="text" name="codigo_projeto" placeholder="Código do projeto" required>
         <button type="submit" class="reservar-btn"><i class="fa-solid fa-check"></i></button>
     </form>
-
+<?php endif; ?>
 
 <?php endif; ?>
 
