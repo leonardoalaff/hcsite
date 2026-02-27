@@ -549,5 +549,12 @@
         "tipo": "entrada",
         "quantidade": 1,
         "data": "26\/02\/2026 14:48"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "130",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "27\/02\/2026 20:33"
     }
 ]
