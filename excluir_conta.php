@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once("excluir_conta.php"); // seu arquivo de conexão
 
 // Verifica se está logado
 if (!isset($_SESSION['usuario'])) {
@@ -8,12 +7,22 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-$usuario = $_SESSION['usuario'];
+$usuarioLogado = $_SESSION['usuario'];
 
-// Prepara e executa exclusão
-$stmt = $conn->prepare("DELETE FROM usuarios WHERE usuario = ?");
-$stmt->bind_param("s", $usuario);
-$stmt->execute();
+// Lê o arquivo JSON
+$usuarios = json_decode(file_get_contents("usuarios.json"), true);
+
+// Filtra removendo o usuário logado
+$usuariosAtualizados = [];
+
+foreach ($usuarios as $u) {
+    if ($u['usuario'] !== $usuarioLogado) {
+        $usuariosAtualizados[] = $u;
+    }
+}
+
+// Salva novamente no arquivo
+file_put_contents("usuarios.json", json_encode($usuariosAtualizados, JSON_PRETTY_PRINT));
 
 // Encerra sessão
 session_unset();

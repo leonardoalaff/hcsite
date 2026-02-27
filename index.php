@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css23/style.css">
+    <link rel="stylesheet" href="css24/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -93,6 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
 
     <div class="menu">
         <div class="menu-icon menu-icon-perfil" id="menuConta">
+
 
     <span class="nome-conta">
 <?php
@@ -224,6 +225,27 @@ if (isset($_SESSION['usuario'])) {
     <div class="box-s1">
             <video id="bgVideo" src="css21/video5.mp4" autoplay muted></video>
 <div class="gradiente" id="gradiente"></div>
+
+
+
+
+
+<div class="container-mensagens">
+  <h2>📩 Mensagens</h2>
+
+  <div class="mensagem-form">
+    <input type="text" id="destinatario" placeholder="Enviar para (nome do usuário)">
+    <textarea id="mensagemTexto" placeholder="Digite sua mensagem"></textarea>
+    <button onclick="enviarMensagem()">Enviar</button>
+  </div>
+
+  <h3>Caixa de entrada</h3>
+  <div id="caixaMensagens" class="caixa-mensagens"></div>
+</div>
+
+
+
+
 
     <div class="gradiente"></div>
 
@@ -418,6 +440,8 @@ function confirmarExclusao() {
     }
 }
 </script>
+
+
 
     <script src="javascript13/script.js"></script>
 </body>

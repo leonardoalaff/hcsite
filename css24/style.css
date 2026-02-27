@@ -1095,9 +1095,116 @@ textarea {
 
 
 .excluir-conta {
-    color: #ff4d4d;
+    background: #f30000;
 }
 
-.excluir-conta:hover {
-    background: #2a0000;
+
+
+
+
+
+
+
+/* ===================== */
+/* 📩 MENSAGENS - TELA INICIAL */
+/* ===================== */
+
+.container-mensagens {
+    position: fixed;
+    top: 15%;
+    right: 5%;
+    width: 350px;
+    height: 40%;
+    background: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.container-mensagens h2 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-mensagens h3 {
+    color: #9CA3AF;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.mensagem-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mensagem-form input,
+.mensagem-form textarea {
+    background: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+.mensagem-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.mensagem-form input:focus,
+.mensagem-form textarea:focus {
+    outline: none;
+    border: 1px solid #2563EB;
+    box-shadow: 0 0 5px #2563EB;
+}
+
+.mensagem-form button {
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mensagem-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.5);
+}
+
+/* Caixa de mensagens */
+
+.caixa-mensagens {
+    margin-top: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 5px;
+}
+
+.caixa-mensagens::-webkit-scrollbar {
+    width: 6px;
+}
+
+.caixa-mensagens::-webkit-scrollbar-thumb {
+    background: #2563EB;
+    border-radius: 10px;
+}
+
+.mensagem-item {
+    background: #111827;
+    border-left: 4px solid #2563EB;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 13px;
 }

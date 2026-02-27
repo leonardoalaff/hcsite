@@ -1,7 +1,12 @@
 [
     {
         "usuario": "Leonardo",
-        "senha": "$2y$10$I2pyWf\/gM3Svr\/IA4zFErOHYla6mgivGzYJCB4AbL4g1889rNj8tK",
+        "senha": "$2y$10$Ncj64oPGDzQqfmvmVELKYOMbMO1dQeqezCCTNtzbRtkiYg4hkCDGu",
+        "perfil": "usuario"
+    },
+    {
+        "usuario": "teste",
+        "senha": "$2y$10$hNzJKxuu6Cx7qMTxTlkz3.ZmIyAWqTY.Mz4gXka7eFr89yYy1.gti",
         "perfil": "usuario"
     }
 ]

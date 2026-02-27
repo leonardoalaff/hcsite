@@ -277,17 +277,24 @@ video.addEventListener("ended", () => {
 
 let lembretes = [];
 
-// Carrega dados salvos ao abrir a página
+// Carregar do servidor
 window.onload = function() {
-  const dados = localStorage.getItem("lembretes");
-  if (dados) {
-    lembretes = JSON.parse(dados);
-    renderizarLembretes();
-  }
+  fetch("carregar_lembretes.php")
+    .then(res => res.json())
+    .then(dados => {
+      lembretes = dados;
+      renderizarLembretes();
+    });
 };
 
-function salvarNoLocalStorage() {
-  localStorage.setItem("lembretes", JSON.stringify(lembretes));
+function salvarNoServidor() {
+  fetch("salvar_lembretes.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(lembretes)
+  });
 }
 
 function adicionarLembrete() {
@@ -307,7 +314,7 @@ function adicionarLembrete() {
   };
 
   lembretes.push(novoLembrete);
-  salvarNoLocalStorage();
+  salvarNoServidor();
   renderizarLembretes();
 
   document.getElementById("titulo").value = "";
@@ -349,13 +356,13 @@ function toggleConcluido(id) {
     return lembrete;
   });
 
-  salvarNoLocalStorage();
+  salvarNoServidor();
   renderizarLembretes();
 }
 
 function excluirLembrete(id) {
   lembretes = lembretes.filter(lembrete => lembrete.id !== id);
-  salvarNoLocalStorage();
+  salvarNoServidor();
   renderizarLembretes();
 }
 
@@ -369,7 +376,7 @@ function editarLembrete(id) {
     lembrete.titulo = novoTitulo;
     lembrete.descricao = novaDescricao;
 
-    salvarNoLocalStorage();
+    salvarNoServidor();
     renderizarLembretes();
   }
 }
@@ -485,3 +492,44 @@ menuConta.addEventListener("click", () => {
 
 
 
+function enviarMensagem() {
+  const destinatario = document.getElementById("destinatario").value;
+  const mensagem = document.getElementById("mensagemTexto").value;
+
+  if (!destinatario || !mensagem) {
+    alert("Preencha todos os campos");
+    return;
+  }
+
+  fetch("enviar_mensagem.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ destinatario, mensagem })
+  }).then(() => {
+    document.getElementById("mensagemTexto").value = "";
+    alert("Mensagem enviada!");
+  });
+}
+
+function carregarMensagens() {
+  fetch("carregar_mensagens.php")
+    .then(res => res.json())
+    .then(dados => {
+      const caixa = document.getElementById("caixaMensagens");
+      caixa.innerHTML = "";
+
+      dados.forEach(msg => {
+        const div = document.createElement("div");
+        div.className = "mensagem";
+        div.innerHTML = `
+          <strong>${msg.de}</strong>
+          <small>${msg.data}</small>
+          <p>${msg.mensagem}</p>
+        `;
+        caixa.appendChild(div);
+      });
+    });
+}
+
+setInterval(carregarMensagens, 5000);
+carregarMensagens();
