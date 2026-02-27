@@ -91,29 +91,26 @@ header('Content-Type: text/html; charset=utf-8');
     <p class="sobra-reservada">Reservada por: <strong><?=   htmlspecialchars($sobra['reservada_por']) ?></strong></p>
     <?php endif; ?>
 
+<?php if (isset($_SESSION['usuario'])): ?>
 
-                <?php
-$perfil = $_SESSION['perfil'] ?? 'visitante';
-if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
-?>
-    <?php
-$perfil = $_SESSION['perfil'] ?? 'visitante';
-if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
-?>
+<div class="acoes-sobra">
+    <!-- Botão Editar -->
+    <a href="editar_sobra.php?id=<?= htmlspecialchars($sobra["codigo"]) ?>" class="editar-btn">
+        <i class="fa-solid fa-pen-to-square"></i>
+    </a>
 
+    <!-- Botão Remover -->
+    <form method="POST" style="margin-top:10px;">
+        <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
+        <button type="submit" class="remover-btn">
+            <i class="fa-solid fa-trash-can"></i>
+        </button>
+    </form>
+</div>
 
-<?php if ($perfil === 'detalhamento' || $perfil === 'encarregado'): ?>
-
-    <div class="acoes-sobra">
-        <!-- Botão de Editar -->
-        <a href="editar_sobra.php?id=<?= htmlspecialchars($sobra["codigo"]) ?>" class="editar-btn"><i class="fa-solid fa-pen-to-square"></i></a>
-        <?php endif; ?>
-
-        <form method="POST" style="margin-top:10px;">
-            <input type="hidden" name="ocultar_codigo" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
-            <button type="submit" class="remover-btn"><i class="fa-solid fa-trash-can"></i></button>
-        </form>
-    </div>
+<?php endif; ?>
+                
+    
 
     <!-- Botão de reservar -->
     <button type="button" class="reservar-toggle-btn" data-codigo="<?= htmlspecialchars($sobra["codigo"]) ?>"><i class="fa-solid fa-bookmark"></i> Reservar sobra</button>
@@ -124,9 +121,6 @@ if ($perfil === 'detalhamento' || $perfil === 'encarregado'):
         <input class="input-reservar-sobra" type="text" name="codigo_projeto" placeholder="Código do projeto" required>
         <button type="submit" class="reservar-btn"><i class="fa-solid fa-check"></i></button>
     </form>
-<?php endif; ?>
-
-<?php endif; ?>
 
             </div>
         <?php endforeach; ?>
