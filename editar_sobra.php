@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-$perfil = $_SESSION['perfil'] ?? 'visitante';
-if ($perfil !== 'detalhamento' && $perfil !== 'encarregado') {
+if (!isset($_SESSION['usuario'])) {
     header('Location: index.php');
     exit;
 }

@@ -763,5 +763,29 @@
         "material": "SAC 350",
         "localizacao": "EM FRENTE O DETALHAMENTO",
         "imagem": "uploads\/1772138767_6 SAC 350.jpeg"
+    },
+    {
+        "codigo": "0065",
+        "tiposobra": "sobraregular",
+        "descricao": "teste 2",
+        "espessura": "6",
+        "largura": "565 x 6565",
+        "comprimento": "5",
+        "material": "sasa",
+        "localizacao": "fegregre",
+        "imagem": "uploads\/1772226567_menu-hambueguer2.png",
+        "oculta": true
+    },
+    {
+        "codigo": "0066",
+        "tiposobra": "sobraregular",
+        "descricao": "teste",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "",
+        "oculta": true
     }
 ]

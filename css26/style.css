@@ -1115,24 +1115,25 @@ textarea {
     right: 5%;
     width: 350px;
     height: 40%;
-    background: rgba(17, 24, 39, 0.85);
-    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.377);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
     z-index: 5;
+    background-color: white;
 }
 
 .container-mensagens h2 {
-    color: white;
+    color: #1E1E1E;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .container-mensagens h3 {
-    color: #9CA3AF;
+    color: #5c6064;
     margin-top: 15px;
     font-size: 14px;
 }
@@ -1145,12 +1146,13 @@ textarea {
 
 .mensagem-form input,
 .mensagem-form textarea {
-    background: #1F2937;
+    background: white;
     border: 1px solid #374151;
     border-radius: 8px;
     padding: 8px;
-    color: white;
     font-size: 14px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .mensagem-form textarea {
@@ -1162,7 +1164,6 @@ textarea {
 .mensagem-form textarea:focus {
     outline: none;
     border: 1px solid #2563EB;
-    box-shadow: 0 0 5px #2563EB;
 }
 
 .mensagem-form button {
@@ -1178,7 +1179,6 @@ textarea {
 
 .mensagem-form button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.5);
 }
 
 /* Caixa de mensagens */
