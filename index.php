@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+date_default_timezone_set('America/Sao_Paulo');
+
 $arquivo = "sobras.json";
 
 // Lê as sobras existentes (ou cria uma lista vazia)
