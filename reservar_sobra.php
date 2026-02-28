@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['perfil']) || !in_array($_SESSION['perfil'], ['detalhamento', 'encarregado'])) {
+if (!isset($_SESSION['usuario'])) {
     header('Location: index.php');
     exit;
 }
@@ -16,7 +16,7 @@ if ($codigo_reserva && $codigo_projeto && file_exists($arquivo)) {
     foreach ($sobras as &$sobra) {
         if ($sobra['codigo'] === $codigo_reserva) {
             $sobra['reservada'] = true;
-            $sobra['reservada_por'] = $_SESSION['perfil'];
+            $sobra['reservada_por'] = $_SESSION['usuario'];
             $sobra['codigo_projeto'] = $codigo_projeto;
             break;
         }

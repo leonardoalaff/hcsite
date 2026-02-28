@@ -96,25 +96,35 @@ transition: 0.2s;
     transition: 0.2s;
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
-.reservar-toggle-btn:hover {
-    background: linear-gradient(135deg, #15803d, #166534);
-    transform: scale(1.05);
-}
 .input-reservar-sobra {
-    width: 90%;
-    padding: 8px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 13px;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
     outline: none;
-    transition: 0.2s;
     background-color: #f9fafb;
-    margin-bottom: 10px;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
 }
+
+/* Hover */
+.input-reservar-sobra:hover {
+    border-color: #9ca3af;
+    background-color: #ffffff;
+}
+
+/* Focus */
 .input-reservar-sobra:focus {
-    border-color: #2563EB;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
-    background-color: white;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+    background-color: #ffffff;
+}
+
+/* Placeholder */
+.input-reservar-sobra::placeholder {
+    color: #9ca3af;
+    font-weight: 500;
 }
 .reservar-btn {
     background-color: #4b4b4b;
@@ -269,9 +279,60 @@ body.no-scroll {
 
 
 
+/* Caixa principal */
+.reserva-info {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border: 1px solid #bbf7d0;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Cada linha */
+.reserva-linha {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    color: #065f46;
+}
+
+.reserva-linha:last-child {
+    margin-bottom: 0;
+}
+
+/* Ícones */
+.reserva-linha i {
+    font-size: 14px;
+    color: #16a34a;
+}
+
+/* Texto forte */
+.reserva-linha strong {
+    color: #064e3b;
+}
 
 
 
+
+
+.cancelar-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #dc2626;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cancelar-btn:hover {
+    background-color: #b91c1c;
+}
 
 
 

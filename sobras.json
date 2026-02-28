@@ -842,7 +842,10 @@
         "comprimento": "1",
         "material": "ASTM A36",
         "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
-        "imagem": "uploads\/1772282072_28-02-3.jpeg"
+        "imagem": "uploads\/1772282072_28-02-3.jpeg",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC252634"
     },
     {
         "codigo": "0072",
@@ -864,7 +867,8 @@
         "comprimento": "11",
         "material": "ASTM A36",
         "localizacao": "ESTOQUE",
-        "imagem": ""
+        "imagem": "",
+        "oculta": true
     },
     {
         "codigo": "0074",
@@ -882,6 +886,48 @@
         "codigo": "0075",
         "tiposobra": "sobraregular",
         "descricao": "teste",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "",
+        "oculta": true
+    },
+    {
+        "codigo": "0076",
+        "tiposobra": "sobraregular",
+        "descricao": "teste 2",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC252458",
+        "oculta": true
+    },
+    {
+        "codigo": "0077",
+        "tiposobra": "sobraregular",
+        "descricao": "adada",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "teste",
+        "codigo_projeto": "hc262458",
+        "oculta": true
+    },
+    {
+        "codigo": "0078",
+        "tiposobra": "sobraregular",
+        "descricao": "asas",
         "espessura": "",
         "largura": "",
         "comprimento": "",

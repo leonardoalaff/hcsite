@@ -54,7 +54,7 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <title>Listar Sobras</title>
-    <link rel="stylesheet" href="css11/estilo.css">
+    <link rel="stylesheet" href="css12/estilo.css">
     <link rel="stylesheet" href="css-mobile6/mobile2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -82,15 +82,29 @@ $imagem = !empty($sobra["imagem"]) ? $sobra["imagem"] : "imagens/sem-imagem.jpg"
 <img src="<?= htmlspecialchars($imagem) ?>" alt="Imagem da sobra" class="sobra-img">
 
 
-    <?php if (!empty($sobra['reservada']) && !empty($sobra['codigo_projeto'])): ?>
-    <p class="sobra-reservada sobra-reservada2">Reservada para o projeto: <strong><?= htmlspecialchars($sobra['codigo_projeto']) ?></strong></p>
+   <?php if (!empty($sobra['reservada'])): ?>
+    <div class="reserva-info">
+        <div class="reserva-linha">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Projeto:</span>
+            <strong><?= htmlspecialchars($sobra['codigo_projeto']) ?></strong>
+        </div>
+
+        <div class="reserva-linha">
+            <i class="fa-solid fa-user"></i>
+            <span>Reservada por:</span>
+            <strong><?= htmlspecialchars($sobra['reservada_por']) ?></strong>
+        </div>
+
+        <!-- Botão cancelar -->
+        <form method="POST" action="cancelar_reserva.php" style="margin-top:10px;">
+            <input type="hidden" name="codigo_cancelar" value="<?= htmlspecialchars($sobra['codigo']) ?>">
+            <button type="submit" class="cancelar-btn">
+                <i class="fa-solid fa-xmark"></i> Cancelar reserva
+            </button>
+        </form>
+    </div>
 <?php endif; ?>
-
-
-
-<?php if (!empty($sobra['reservada'])): ?>
-    <p class="sobra-reservada">Reservada por: <strong><?=   htmlspecialchars($sobra['reservada_por']) ?></strong></p>
-    <?php endif; ?>
 
 <?php if (isset($_SESSION['usuario'])): ?>
 
@@ -114,14 +128,33 @@ $imagem = !empty($sobra["imagem"]) ? $sobra["imagem"] : "imagens/sem-imagem.jpg"
     
 
     <!-- Botão de reservar -->
-    <button type="button" class="reservar-toggle-btn" data-codigo="<?= htmlspecialchars($sobra["codigo"]) ?>"><i class="fa-solid fa-bookmark"></i> Reservar sobra</button>
+    <button type="button"
+        class="reservar-toggle-btn"
+        data-codigo="<?= htmlspecialchars($sobra["codigo"]) ?>">
+    <i class="fa-solid fa-bookmark"></i> Reservar sobra
+</button>
 
     <!-- Formulário de reserva -->
-    <form method="POST" action="reservar_sobra.php" class="form-reserva" id="form-<?= htmlspecialchars($sobra["codigo"]) ?>" style="display:none; margin-top:5px;">
-        <input class="input-reservar-sobra" type="hidden" name="codigo_reserva" value="<?= htmlspecialchars($sobra["codigo"]) ?>">
-        <input class="input-reservar-sobra" type="text" name="codigo_projeto" placeholder="Código do projeto" required>
-        <button type="submit" class="reservar-btn"><i class="fa-solid fa-check"></i></button>
-    </form>
+    <form method="POST"
+      action="reservar_sobra.php"
+      class="form-reserva"
+      id="form-<?= htmlspecialchars($sobra["codigo"]) ?>"
+      style="display:none; margin-top:5px;">
+
+    <input type="hidden"
+           name="codigo_reserva"
+           value="<?= htmlspecialchars($sobra["codigo"]) ?>">
+
+    <input class="input-reservar-sobra"
+       type="text"
+       name="codigo_projeto"
+       placeholder="Código do projeto"
+       required>
+
+    <button type="submit" class="reservar-btn">
+        <i class="fa-solid fa-check"></i>
+    </button>
+</form>
 
             </div>
         <?php endforeach; ?>
