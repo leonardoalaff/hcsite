@@ -76,7 +76,7 @@ header('Content-Type: text/html; charset=utf-8');
 
 
                 <?php
-$imagem = !empty($sobra["imagem"]) ? $sobra["imagem"] : "imagens/sem-imagem.png";
+$imagem = !empty($sobra["imagem"]) ? $sobra["imagem"] : "imagens/sem-imagem.jpg";
 ?>
 
 <img src="<?= htmlspecialchars($imagem) ?>" alt="Imagem da sobra" class="sobra-img">
