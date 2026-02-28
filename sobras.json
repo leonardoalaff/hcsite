@@ -877,5 +877,17 @@
         "localizacao": "",
         "imagem": "",
         "oculta": true
+    },
+    {
+        "codigo": "0075",
+        "tiposobra": "sobraregular",
+        "descricao": "teste",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "",
+        "oculta": true
     }
 ]
