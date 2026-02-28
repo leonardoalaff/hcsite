@@ -133,11 +133,25 @@ $imagem = !empty($sobra["imagem"]) ? $sobra["imagem"] : "imagens/sem-imagem.png"
 
     <script>
     document.querySelectorAll('.sobra-img').forEach(img => {
-        img.addEventListener('click', () => {
-            img.classList.toggle('expanded');
-            document.body.classList.toggle('no-scroll', img.classList.contains('expanded'));
-        });
+    img.addEventListener('click', () => {
+        if (!img.classList.contains('expanded')) {
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            document.body.appendChild(overlay);
+
+            img.classList.add('expanded');
+            document.body.classList.add('no-scroll');
+
+            overlay.addEventListener('click', () => {
+                img.classList.remove('expanded');
+                document.body.classList.remove('no-scroll');
+                overlay.remove();
+            });
+
+        }
     });
+});
 </script> 
 
 
