@@ -787,5 +787,72 @@
         "localizacao": "",
         "imagem": "",
         "oculta": true
+    },
+    {
+        "codigo": "0067",
+        "tiposobra": "sobraregular",
+        "descricao": "",
+        "espessura": "",
+        "largura": "",
+        "comprimento": "",
+        "material": "",
+        "localizacao": "",
+        "imagem": "uploads\/1772277962_hack.php",
+        "oculta": true
+    },
+    {
+        "codigo": "0068",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA #6,35",
+        "espessura": "19",
+        "largura": "370 X 2200",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
+        "imagem": "uploads\/1772281884_28-02.jpeg"
+    },
+    {
+        "codigo": "0069",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "19",
+        "largura": "-",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
+        "imagem": "uploads\/1772281956_28-02-1.jpeg"
+    },
+    {
+        "codigo": "0070",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "19",
+        "largura": "-",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
+        "imagem": "uploads\/1772282031_28-02-2.jpeg"
+    },
+    {
+        "codigo": "0071",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "19",
+        "largura": "-",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
+        "imagem": "uploads\/1772282072_28-02-3.jpeg"
+    },
+    {
+        "codigo": "0072",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "6.35",
+        "largura": "1500 X 3900",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "PRÓXIMO À METALEIRA",
+        "imagem": ""
     }
 ]

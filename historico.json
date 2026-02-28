@@ -556,5 +556,19 @@
         "tipo": "saida",
         "quantidade": 1,
         "data": "27\/02\/2026 20:33"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 1,
+        "data": "28\/02\/2026 11:31"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "28\/02\/2026 11:31"
     }
 ]
