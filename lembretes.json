@@ -17,6 +17,24 @@
             "titulo": "QUALIDADE",
             "descricao": "CONFERIR IDENTIFICAÇÃO NAS MÁQUINAS",
             "concluido": false
+        },
+        {
+            "id": 1772539274000,
+            "titulo": "MUDAR PLANO - HC26282 - REQ. 26136",
+            "descricao": "MUDAR PLANO P\/CLAUDIONEI E COLOCAR TUDO EM CHAPA DE 2500 X 6000",
+            "concluido": false
+        },
+        {
+            "id": 1772542223476,
+            "titulo": "PROJETOS PARA CORTAR PRIMEIRO",
+            "descricao": "#8 - HC26321 - HC253394\n\n#3,18 - HC252528 - HC252518 - HC26343 - HC26415\n\n#64 - HC26296",
+            "concluido": false
+        },
+        {
+            "id": 1772634252624,
+            "titulo": "ID",
+            "descricao": "GERADOR DE SEQUENCIA DE ID",
+            "concluido": false
         }
     ],
     "teste": []

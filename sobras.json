@@ -179,7 +179,10 @@
         "comprimento": "27",
         "material": "ASTM A36",
         "localizacao": "EM FRENTE À MESA DO GENIM",
-        "imagem": "uploads\/1771883877_SOBRA6.jpeg"
+        "imagem": "uploads\/1771883877_SOBRA6.jpeg",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26434"
     },
     {
         "codigo": "0016",
@@ -809,7 +812,10 @@
         "comprimento": "1",
         "material": "ASTM A36",
         "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
-        "imagem": "uploads\/1772281884_28-02.jpeg"
+        "imagem": "uploads\/1772281884_28-02.jpeg",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26124"
     },
     {
         "codigo": "0069",
@@ -820,7 +826,10 @@
         "comprimento": "1",
         "material": "ASTM A36",
         "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
-        "imagem": "uploads\/1772281956_28-02-1.jpeg"
+        "imagem": "uploads\/1772281956_28-02-1.jpeg",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26124"
     },
     {
         "codigo": "0070",
@@ -831,7 +840,10 @@
         "comprimento": "1",
         "material": "ASTM A36",
         "localizacao": "PÁTIO, 3° PILHA, À ESQUERDA",
-        "imagem": "uploads\/1772282031_28-02-2.jpeg"
+        "imagem": "uploads\/1772282031_28-02-2.jpeg",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26124"
     },
     {
         "codigo": "0071",
@@ -845,7 +857,7 @@
         "imagem": "uploads\/1772282072_28-02-3.jpeg",
         "reservada": true,
         "reservada_por": "Leonardo",
-        "codigo_projeto": "HC252634"
+        "codigo_projeto": "HC26124"
     },
     {
         "codigo": "0072",
@@ -856,7 +868,10 @@
         "comprimento": "1",
         "material": "ASTM A36",
         "localizacao": "PRÓXIMO À METALEIRA",
-        "imagem": ""
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26434"
     },
     {
         "codigo": "0073",
@@ -935,5 +950,110 @@
         "localizacao": "",
         "imagem": "",
         "oculta": true
+    },
+    {
+        "codigo": "0079",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "9.5",
+        "largura": "-",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "AO LADO DA BANCA DE 12000",
+        "imagem": "uploads\/1772462571_9,5 NOVA.jpeg",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26396"
+    },
+    {
+        "codigo": "0080",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "9.5",
+        "largura": "1500 X 6000",
+        "comprimento": "9",
+        "material": "ASTM A36",
+        "localizacao": "ESTOQUE",
+        "imagem": ""
+    },
+    {
+        "codigo": "0081",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "6.35",
+        "largura": "1500 X 3000",
+        "comprimento": "44",
+        "material": "ASTM A572",
+        "localizacao": "EM FRENTE O DETALHAMENTO",
+        "imagem": "uploads\/1772462833_6,35 A572.jpeg"
+    },
+    {
+        "codigo": "0082",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "12.7",
+        "largura": "135 X 1150",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "AO LADO DA CAÇAMBA DE RETALHO",
+        "imagem": "",
+        "reservada": true,
+        "reservada_por": "Leonardo",
+        "codigo_projeto": "HC26124"
+    },
+    {
+        "codigo": "0083",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "12.7",
+        "largura": "1500 X 6000",
+        "comprimento": "14",
+        "material": "ASTM A36",
+        "localizacao": "ESTOQUE",
+        "imagem": ""
+    },
+    {
+        "codigo": "0084",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "19",
+        "largura": "1800 X 6000",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "ESTOQUE",
+        "imagem": ""
+    },
+    {
+        "codigo": "0085",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "4.75",
+        "largura": "1000 X 1200",
+        "comprimento": "3",
+        "material": "ASTM A36",
+        "localizacao": "AO LADO DA CNC LASER",
+        "imagem": "uploads\/1772624112_4mm.jpeg"
+    },
+    {
+        "codigo": "0086",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "2",
+        "largura": "940 X 1480",
+        "comprimento": "4",
+        "material": "ASTM A36",
+        "localizacao": "AO LADO DA CNC LASER",
+        "imagem": "uploads\/1772624150_2mm.jpeg"
+    },
+    {
+        "codigo": "0087",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "9.5",
+        "largura": "1500 X 2200",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "SOBRA DO HC26124",
+        "imagem": ""
     }
 ]
