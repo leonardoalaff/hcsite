@@ -654,9 +654,6 @@ iframe {
     backdrop-filter: blur(15px);
 }
 .card-avisos:hover {
-    transform: scale(1.3);
-    transition: 0.45s;
-    border: none;
 }
 .card-avisos1:hover {
     background: url('ChatGPT\ Image\ 8\ de\ fev.\ de\ 2026\,\ 13_14_41.png');
@@ -1111,19 +1108,22 @@ textarea {
 
 .container-mensagens {
     position: fixed;
-    top: 15%;
-    right: 5%;
-    width: 350px;
-    height: 40%;
-    background: rgba(0, 0, 0, 0.377);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+    top: 10%;
+    right: -500px; /* ESCONDIDO */
+    width: 450px;
+    height: 70%;
+    background: white;
+    border-radius: 15px 0 0 15px;
     padding: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    box-shadow: -5px 0 30px rgba(0,0,0,0.4);
     display: flex;
     flex-direction: column;
-    z-index: 5;
-    background-color: white;
+    z-index: 9999;
+    transition: right 0.4s ease;
+}
+
+.container-mensagens.ativo {
+    right: 2%;
 }
 
 .container-mensagens h2 {
@@ -1135,7 +1135,8 @@ textarea {
 .container-mensagens h3 {
     color: #5c6064;
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .mensagem-form {
@@ -1199,12 +1200,50 @@ textarea {
     border-radius: 10px;
 }
 
-.mensagem-item {
-    background: #111827;
-    border-left: 4px solid #2563EB;
-    padding: 8px;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    color: white;
-    font-size: 13px;
+
+
+
+
+
+
+
+.icone-mensagem {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 10000;
+    transition: transform 0.2s ease;
+}
+
+.icone-mensagem i {
+    color: #2563EB;
+    font-size: 26px;
+}
+
+.icone-mensagem:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.caixa-mensagens div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.466);
 }

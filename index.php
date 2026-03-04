@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css26/style.css">
+    <link rel="stylesheet" href="css27/style.css">
     <link rel="stylesheet" href="css-mobile7/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -231,6 +231,10 @@ if (isset($_SESSION['usuario'])) {
 
 
 
+
+<div class="icone-mensagem" onclick="toggleMensagens()">
+    <i class="fa-solid fa-comment-dots"></i>
+</div>
 
 <div class="container-mensagens">
   <h2>📩 Mensagens</h2>
@@ -440,6 +444,18 @@ function confirmarExclusao() {
     if (confirm("Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.")) {
         window.location.href = "excluir_conta.php";
     }
+}
+</script>
+
+
+
+
+
+
+<script>
+function toggleMensagens() {
+    const container = document.querySelector(".container-mensagens");
+    container.classList.toggle("ativo");
 }
 </script>
 
