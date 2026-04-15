@@ -584,5 +584,33 @@
         "tipo": "saida",
         "quantidade": 1,
         "data": "04\/03\/2026 21:13"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 1,
+        "data": "05\/03\/2026 14:46"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "05\/03\/2026 14:47"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "05\/03\/2026 17:00"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "06\/03\/2026 13:59"
     }
 ]

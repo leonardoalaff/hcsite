@@ -14,85 +14,103 @@ function movimentar() {
     .then(() => location.reload());
 }
 
-
-
-
-
 function carregarHistorico() {
     fetch("historico.json")
-    .then(r => r.json())
-    .then(dados => {
-        let html = "<table border='1'><tr><th>Item</th><th>Amperes</th><th>Tipo</th><th>Qtd</th><th>Data</th></tr>";
+        .then(r => r.json())
+        .then(dados => {
+            let html = "<table><thead><tr><th>Item</th><th>Amperes</th><th>Movimento</th><th>Qtd</th><th>Data</th></tr></thead><tbody>";
 
-        dados.reverse().forEach(h => {
-            html += `<tr>
-                <td>${h.item}</td>
-                <td>${h.amp}A</td>
-                <td>${h.tipo}</td>
-                <td>${h.quantidade}</td>
-                <td>${h.data}</td>
-            </tr>`;
+            dados.reverse().forEach(h => {
+                const tipo = h.tipo === "entrada" ? "Entrada" : "Saída";
+                html += `<tr>
+                    <td>${h.item}</td>
+                    <td>${h.amp}A</td>
+                    <td>${tipo}</td>
+                    <td>${h.quantidade}</td>
+                    <td>${h.data}</td>
+                </tr>`;
+            });
+
+            html += "</tbody></table>";
+            document.getElementById("historico").innerHTML = html;
+        })
+        .catch(() => {
+            document.getElementById("historico").innerHTML = "<p style='padding:16px'>Não foi possível carregar o histórico.</p>";
         });
-
-        html += "</table>";
-        document.getElementById("historico").innerHTML = html;
-    });
 }
 
 carregarHistorico();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function gerarGrafico() {
     fetch("historico.json")
-    .then(r => r.json())
-    .then(dados => {
+        .then(r => r.json())
+        .then(dados => {
+            const consumo = { "50": 0, "130": 0, "200": 0 };
 
-        let consumo = { "50": 0, "130": 0, "200": 0 };
+            dados.forEach(h => {
+                if (h.tipo !== "saida" || !h.amp) return;
 
-        dados.forEach(h => {
-            if (h.tipo !== "saida") return;
+                const amp = String(h.amp);
+                const qtd = parseInt(h.quantidade, 10) || 0;
 
-            if (!h.amp) return; // IGNORA registros antigos sem amperagem
+                if (consumo[amp] !== undefined) {
+                    consumo[amp] += qtd;
+                }
+            });
 
-            let amp = String(h.amp);
-            let qtd = parseInt(h.quantidade) || 0;
+            const ctx = document.getElementById("graficoAmp");
 
-            if (consumo[amp] !== undefined) {
-                consumo[amp] += qtd;
-            }
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["50A", "130A", "200A"],
+                    datasets: [{
+                        label: "Saídas registradas",
+                        data: [consumo["50"], consumo["130"], consumo["200"]],
+                        backgroundColor: [
+                            "rgba(13, 110, 253, 0.82)",
+                            "rgba(59, 130, 246, 0.72)",
+                            "rgba(15, 23, 42, 0.82)"
+                        ],
+                        borderRadius: 14,
+                        borderSkipped: false,
+                        maxBarThickness: 48
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: "#475569",
+                                font: {
+                                    weight: "600"
+                                }
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: "rgba(148, 163, 184, 0.18)"
+                            },
+                            ticks: {
+                                color: "#64748b",
+                                precision: 0
+                            }
+                        }
+                    }
+                }
+            });
         });
-
-        console.log("DEBUG consumo:", consumo);
-
-        const ctx = document.getElementById("graficoAmp");
-
-        new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: ["50A", "130A", "200A"],
-                datasets: [{
-                    label: "Consumo CNC",
-                    data: [consumo["50"], consumo["130"], consumo["200"]],
-                    backgroundColor: ["#3498db", "#f39c12", "#e74c3c"]
-                }]
-            }
-        });
-    });
 }
 
 gerarGrafico();
