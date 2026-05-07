@@ -1,7 +1,7 @@
 {
     "Bicos": {
         "50": {
-            "quantidade": 11,
+            "quantidade": 12,
             "minimo": 1
         },
         "130": {
@@ -23,7 +23,7 @@
             "minimo": 1
         },
         "200": {
-            "quantidade": 4,
+            "quantidade": 3,
             "minimo": 1
         }
     },
@@ -41,7 +41,7 @@
             "minimo": 1
         }
     },
-    "Cer\u00e2micas": {
+    "Cerâmicas": {
         "50": {
             "quantidade": 3,
             "minimo": 1

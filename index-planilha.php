@@ -34,7 +34,7 @@ $amperagensAtivas = count($amperagensAtivas);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estoque CNC</title>
-<link rel="stylesheet" href="styleconsumiveis3.css">
+<link rel="stylesheet" href="styleconsumiveis6.css">
 </head>
 <body class="cnc-dashboard">
 
@@ -53,19 +53,19 @@ $amperagensAtivas = count($amperagensAtivas);
         <div class="hero-stats">
             <article class="mini-card highlight-card">
                 <span class="mini-label">Registros monitorados</span>
-                <strong><?= $totalRegistros ?></strong>
+                <strong id="statRegistrosMonitorados"><?= $totalRegistros ?></strong>
             </article>
             <article class="mini-card">
                 <span class="mini-label">Quantidade total</span>
-                <strong><?= $totalGeral ?></strong>
+                <strong id="statQuantidadeTotal"><?= $totalGeral ?></strong>
             </article>
             <article class="mini-card">
                 <span class="mini-label">Itens em alerta</span>
-                <strong><?= $itensCriticos ?></strong>
+                <strong id="statItensCriticos"><?= $itensCriticos ?></strong>
             </article>
             <article class="mini-card">
                 <span class="mini-label">Amperagens ativas</span>
-                <strong><?= $amperagensAtivas ?></strong>
+                <strong id="statAmperagensAtivas"><?= $amperagensAtivas ?></strong>
             </article>
         </div>
     </section>
@@ -100,9 +100,19 @@ $amperagensAtivas = count($amperagensAtivas);
                                 $alerta = ($qtd <= $min);
                             ?>
                             <tr class="<?= $alerta ? 'alerta' : '' ?>">
-                                <td><?= htmlspecialchars($item) ?></td>
-                                <td><?= htmlspecialchars($amp) ?>A</td>
-                                <td><?= $qtd ?></td>
+                                <td><?= htmlspecialchars($item, ENT_QUOTES, 'UTF-8') ?></td>
+                                <td><?= htmlspecialchars($amp, ENT_QUOTES, 'UTF-8') ?>A</td>
+                                <td>
+                                    <button
+                                        type="button"
+                                        class="editable-quantity"
+                                        title="Clique para alterar a quantidade"
+                                        data-item="<?= htmlspecialchars($item, ENT_QUOTES, 'UTF-8') ?>"
+                                        data-amp="<?= htmlspecialchars($amp, ENT_QUOTES, 'UTF-8') ?>"
+                                        data-minimo="<?= $min ?>"
+                                        data-quantidade-atual="<?= $qtd ?>"
+                                    ><?= $qtd ?></button>
+                                </td>
                                 <td><?= $min ?></td>
                                 <td>
                                     <span class="status-pill <?= $alerta ? 'status-alerta' : 'status-ok' ?>">
@@ -196,20 +206,30 @@ $amperagensAtivas = count($amperagensAtivas);
         </article>
 
         <article class="glass-card history-card panel-wide">
-            <div class="panel-header">
+            <div class="panel-header history-header">
                 <div>
                     <span class="panel-kicker">Rastreamento</span>
                     <h2>Histórico de movimentações</h2>
                 </div>
-                <span class="panel-badge muted">Atualização automática</span>
             </div>
+
+            <div class="history-toolbar">
+                <label class="history-filter" for="filtroMesHistorico">
+                    <span>Filtrar por mês</span>
+                    <select id="filtroMesHistorico">
+                        <option value="">Todos os meses</option>
+                    </select>
+                </label>
+                <button type="button" class="secondary-action" id="limparFiltroHistorico">Limpar filtro</button>
+            </div>
+
             <div id="historico"></div>
         </article>
     </section>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="scriptconsumiveis2.js"></script>
+<script src="scriptconsumiveis5.js"></script>
 
 </body>
 </html>
