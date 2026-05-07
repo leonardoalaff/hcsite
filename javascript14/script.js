@@ -516,3 +516,15 @@ function carregarMensagens() {
 
 setInterval(carregarMensagens, 5000);
 carregarMensagens();
+// ===== Ações da home mobile em formato de app =====
+document.addEventListener("DOMContentLoaded", () => {
+    const abrirCadastroSobra = () => {
+        const cardAddSobra = document.querySelector('.card-add-sobra');
+        if (cardAddSobra) {
+            cardAddSobra.classList.add('active');
+        }
+    };
+
+    document.getElementById('mobileAddSobraBtn')?.addEventListener('click', abrirCadastroSobra);
+    document.getElementById('mobileAddSobraBtnNav')?.addEventListener('click', abrirCadastroSobra);
+});

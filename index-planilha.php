@@ -34,7 +34,7 @@ $amperagensAtivas = count($amperagensAtivas);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estoque CNC</title>
-<link rel="stylesheet" href="styleconsumiveis2.css">
+<link rel="stylesheet" href="styleconsumiveis3.css">
 </head>
 <body class="cnc-dashboard">
 
@@ -167,9 +167,31 @@ $amperagensAtivas = count($amperagensAtivas);
                     <span class="panel-kicker">Análise</span>
                     <h2>Consumo por amperagem</h2>
                 </div>
+                <span class="panel-badge muted">Painel analítico</span>
             </div>
-            <div class="chart-wrap">
+
+            <div class="chart-metrics">
+                <article class="metric-chip">
+                    <span>Total de saídas</span>
+                    <strong id="metricTotalSaidas">0</strong>
+                </article>
+                <article class="metric-chip">
+                    <span>Faixa mais usada</span>
+                    <strong id="metricPicoAmp">--</strong>
+                </article>
+                <article class="metric-chip">
+                    <span>Média por faixa</span>
+                    <strong id="metricMediaAmp">0</strong>
+                </article>
+            </div>
+
+            <div class="chart-wrap modern-chart-wrap">
                 <canvas id="graficoAmp" width="400" height="220"></canvas>
+            </div>
+
+            <div class="chart-legend" aria-hidden="true">
+                <span><i class="legend-dot bars"></i> Volume por amperagem</span>
+                <span><i class="legend-dot line"></i> Tendência de consumo</span>
             </div>
         </article>
 
@@ -187,7 +209,7 @@ $amperagensAtivas = count($amperagensAtivas);
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="scriptconsumiveis.js"></script>
+<script src="scriptconsumiveis2.js"></script>
 
 </body>
 </html>

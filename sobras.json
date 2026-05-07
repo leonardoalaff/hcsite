@@ -1211,5 +1211,16 @@
         "material": "ASTM A36",
         "localizacao": "SOBRA DO HC26543",
         "imagem": ""
+    },
+    {
+        "codigo": "0102",
+        "tiposobra": "sobraregular",
+        "descricao": "CHAPA",
+        "espessura": "19",
+        "largura": "",
+        "comprimento": "1",
+        "material": "ASTM A36",
+        "localizacao": "SOBRA DO HC26967",
+        "imagem": "uploads\/1776722745_SOBRA 19mm.png"
     }
 ]

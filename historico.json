@@ -612,5 +612,103 @@
         "tipo": "saida",
         "quantidade": 1,
         "data": "06\/03\/2026 13:59"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 3,
+        "data": "15\/04\/2026 23:55"
+    },
+    {
+        "item": "Bicos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 2,
+        "data": "16\/04\/2026 00:04"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 3,
+        "data": "22\/04\/2026 14:20"
+    },
+    {
+        "item": "Bicos",
+        "amp": "130",
+        "tipo": "entrada",
+        "quantidade": 1,
+        "data": "22\/04\/2026 14:23"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 4,
+        "data": "22\/04\/2026 14:25"
+    },
+    {
+        "item": "Cer\u00e2micas",
+        "amp": "50",
+        "tipo": "entrada",
+        "quantidade": 1,
+        "data": "22\/04\/2026 14:26"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 8,
+        "data": "22\/04\/2026 14:27"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 7,
+        "data": "22\/04\/2026 14:28"
+    },
+    {
+        "item": "Bocais",
+        "amp": "200",
+        "tipo": "entrada",
+        "quantidade": 3,
+        "data": "22\/04\/2026 14:28"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "27\/04\/2026 22:03"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "04\/05\/2026 23:52"
+    },
+    {
+        "item": "Bicos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "06\/05\/2026 18:23"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 1,
+        "data": "06\/05\/2026 22:48"
+    },
+    {
+        "item": "Eletrodos",
+        "amp": "200",
+        "tipo": "saida",
+        "quantidade": 2,
+        "data": "07\/05\/2026 23:13"
     }
 ]

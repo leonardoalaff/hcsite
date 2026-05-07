@@ -86,12 +86,96 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !isset($_POST["remover_codigo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site HC</title>
-    <link rel="stylesheet" href="css27/style.css">
-    <link rel="stylesheet" href="css-mobile7/mobile.css">
+    <link rel="stylesheet" href="css29/style.css">
+    <link rel="stylesheet" href="css-mobile8/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="tela-movel"><h1>VERSÃO MOBILE EM BREVE</h1></div>
+    <div class="tela-movel" aria-hidden="true"></div>
+    <main class="mobile-app-home" aria-label="Página inicial mobile">
+        <section class="mobile-app-top">
+            <div>
+                <span class="mobile-eyebrow">HC Indústria</span>
+                <h1>Controle interno</h1>
+                <p>Estoque, medição e ferramentas em uma tela rápida para celular.</p>
+            </div>
+            <button class="mobile-profile-pill" type="button" onclick="window.location.href='<?php echo isset($_SESSION['usuario']) ? 'logout.php' : 'login.php'; ?>'">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </section>
+
+        <section class="mobile-hero-card">
+            <span class="mobile-status-dot"><i></i> Sistema online</span>
+            <h2>Painel operacional</h2>
+            <p>Acesse os módulos principais, cadastre sobras e consulte ferramentas sem perder tempo.</p>
+            <div class="mobile-hero-actions">
+                <button type="button" class="mobile-primary-action" id="mobileAddSobraBtn">
+                    <i class="fa-solid fa-plus"></i> Nova sobra
+                </button>
+                <button type="button" class="mobile-secondary-action" onclick="toggleMensagens()">
+                    <i class="fa-solid fa-comment-dots"></i> Mensagens
+                </button>
+            </div>
+        </section>
+
+        <section class="mobile-search-card">
+            <div class="mobile-section-title">
+                <span>Busca rápida</span>
+                <strong>Sobras</strong>
+            </div>
+            <form class="mobile-search-form" method="get" action="listar_sobras.php">
+                <label>
+                    <span>Código</span>
+                    <input type="text" name="codigo" placeholder="Ex: 0012">
+                </label>
+                <label>
+                    <span>Material</span>
+                    <input type="text" name="material" placeholder="A36, SAC, inox...">
+                </label>
+                <label>
+                    <span>Espessura</span>
+                    <input type="number" name="espessura" step="any" placeholder="mm">
+                </label>
+                <button type="submit">Buscar no estoque</button>
+            </form>
+        </section>
+
+        <section class="mobile-modules">
+            <div class="mobile-section-title">
+                <span>Acessos</span>
+                <strong>Módulos principais</strong>
+            </div>
+            <div class="mobile-module-grid">
+                <a href="index-planilha.php" class="mobile-module-card featured">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <strong>Consumíveis CNC</strong>
+                    <small>Controle de itens e movimentações</small>
+                </a>
+                <a href="index-medicao.php" class="mobile-module-card">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <strong>Medição</strong>
+                    <small>Registros e acompanhamento</small>
+                </a>
+                <button type="button" class="mobile-module-card" onclick="document.querySelector('.s-ferramentas')?.scrollIntoView({behavior:'smooth'});">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <strong>Ferramentas</strong>
+                    <small>Conversor e normas</small>
+                </button>
+                <button type="button" class="mobile-module-card" onclick="toggleMensagens()">
+                    <i class="fa-solid fa-inbox"></i>
+                    <strong>Mensagens</strong>
+                    <small>Caixa de entrada interna</small>
+                </button>
+            </div>
+        </section>
+
+        <nav class="mobile-bottom-nav" aria-label="Navegação mobile">
+            <a href="index.php" class="active"><i class="fa-solid fa-house"></i><span>Início</span></a>
+            <a href="listar_sobras.php"><i class="fa-solid fa-magnifying-glass"></i><span>Sobras</span></a>
+            <button type="button" id="mobileAddSobraBtnNav"><i class="fa-solid fa-plus"></i><span>Adicionar</span></button>
+            <a href="index-medicao.php"><i class="fa-solid fa-ruler"></i><span>Medição</span></a>
+        </nav>
+    </main>
 
     <div class="menu">
         <div class="menu-icon menu-icon-perfil" id="menuConta">
@@ -263,59 +347,134 @@ if (isset($_SESSION['usuario'])) {
         </div>
     </header>
 
-    <main>
-        <!-- FORMULÁRIO DE FILTRO -->
-         <div class="box-filtro">
-          <form class="form-filtro" method="get" action="listar_sobras.php">
-
-          <div class="box-li-filtro">
-            <label class="label-filtro-codigo label-filtro" for="codigo">Código:</label>
-            <input class="input-filtro-codigo input-filtro" type="text" name="codigo" id="codigo">
-          </div>
-
-          <div class="box-li-filtro">
-            <label class="label-filtro-material label-filtro" for="material">Material:</label>
-            <input class="input-filtro-material input-filtro" type="text" name="material" id="material">
-          </div>
-
-          <div class="box-li-filtro">
-            <label class="label-filtro-espessura label-filtro" for="espessura">Espessura:</label>
-            <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any">
-          </div>
-
-            <button class="btn-sobras" style='border-radius: 5px' type="submit">Buscar sobras</button> 
-        </form>
-         </div>
-        
-        <section class="sessao1" id="carrossel">
-
-            <div class="box-card-avisos">
-
-                <a href="index-planilha.php" class="link-planilhas"><div class="card-avisos card-avisos1"><h1>CONSUMÍVEIS CNC</h1></div></a>
-
-                <a href="index-medicao.php" class="link-planilhas"><div class="card-avisos card-avisos2"><h1>MEDIÇÃO</h1></div></a>
-
-                <div class="card-avisos card-avisos3"><h1>PAPEL IMPRESSORA</h1></div>
-
-                <div class="card-avisos card-avisos4"><h1>ESTOQUE FILIAL</h1></div>
-
-                <div class="card-avisos card-avisos5"><h1>NOVA UNIDADE</h1></div>
-
-                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
-                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
-                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
-                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
-                <div class="card-avisos card-avisos4"><h1>PERFIS</h1></div>
-
-
+    <main class="home-dashboard">
+        <section class="dashboard-topbar">
+            <div class="topbar-copy">
+                <span class="topbar-kicker">HC Indústria</span>
+                <h1>Painel inicial</h1>
+                <p>Atalhos rápidos, visão geral das rotinas e acesso direto aos principais módulos do sistema.</p>
             </div>
-</div>
-            
 
+            <div class="topbar-actions">
+                <button class="topbar-chip" type="button" onclick="window.location.href='index-planilha.php'">Consumíveis CNC</button>
+                <button class="topbar-chip secondary" type="button" onclick="window.location.href='index-medicao.php'">Medição</button>
+            </div>
         </section>
 
+        <div class="dashboard-hero-banner">
+            <div class="hero-banner-copy">
+                <span class="hero-badge">Ambiente operacional</span>
+                <h2>Central de controle da produção e do estoque</h2>
+                <p>Organize sobras, acompanhe ferramentas e acesse recursos técnicos em um layout mais limpo e moderno.</p>
+
+                <div class="hero-mini-stats">
+                    <div class="hero-mini-card">
+                        <strong>02</strong>
+                        <span>Módulos ativos</span>
+                    </div>
+                    <div class="hero-mini-card">
+                        <strong>04</strong>
+                        <span>Áreas rápidas</span>
+                    </div>
+                    <div class="hero-mini-card">
+                        <strong>24h</strong>
+                        <span>Acesso interno</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-banner-side">
+                <div class="hero-side-card primary">
+                    <span>Status</span>
+                    <strong>Sistema pronto</strong>
+                    <small>Menu lateral, mensagens e tarefas disponíveis.</small>
+                </div>
+                <div class="hero-side-grid">
+                    <div class="hero-side-card small">
+                        <span>Estoque</span>
+                        <strong>Sobras</strong>
+                    </div>
+                    <div class="hero-side-card small">
+                        <span>Controle</span>
+                        <strong>Medição</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="box-filtro dashboard-filter-box">
+          <form class="form-filtro dashboard-filter" method="get" action="listar_sobras.php">
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-codigo label-filtro" for="codigo">Código</label>
+            <input class="input-filtro-codigo input-filtro" type="text" name="codigo" id="codigo" placeholder="Ex: 0012">
+          </div>
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-material label-filtro" for="material">Material</label>
+            <input class="input-filtro-material input-filtro" type="text" name="material" id="material" placeholder="Buscar material">
+          </div>
+
+          <div class="box-li-filtro">
+            <label class="label-filtro-espessura label-filtro" for="espessura">Espessura</label>
+            <input class="input-filtro-espessura input-filtro" type="number" name="espessura" id="espessura" step="any" placeholder="mm">
+          </div>
+
+            <button class="btn-sobras" type="submit">Buscar sobras</button> 
+        </form>
+         </section>
         
-        
+        <section class="sessao1 dashboard-shortcuts" id="carrossel">
+            <div class="shortcuts-header">
+                <div>
+                    <span class="section-kicker">Acessos rápidos</span>
+                    <h2>Módulos principais</h2>
+                </div>
+                <span class="shortcut-badge">Painel inicial</span>
+            </div>
+
+            <div class="box-card-avisos dashboard-cards-grid">
+                <a href="index-planilha.php" class="link-planilhas dashboard-card-link">
+                    <div class="card-avisos card-avisos1 dashboard-card dashboard-card-featured">
+                        <span class="card-tag">Estoque</span>
+                        <h1>Consumíveis CNC</h1>
+                        <p>Controle visual e movimentação rápida dos itens de uso diário.</p>
+                    </div>
+                </a>
+
+                <a href="index-medicao.php" class="link-planilhas dashboard-card-link">
+                    <div class="card-avisos card-avisos2 dashboard-card">
+                        <span class="card-tag">Produção</span>
+                        <h1>Medição</h1>
+                        <p>Acompanhe medidas e registros operacionais em uma tela dedicada.</p>
+                    </div>
+                </a>
+
+                <div class="card-avisos card-avisos3 dashboard-card">
+                    <span class="card-tag">Suprimentos</span>
+                    <h1>Papel impressora</h1>
+                    <p>Espaço reservado para controle e acompanhamento do consumo.</p>
+                </div>
+
+                <div class="card-avisos card-avisos4 dashboard-card">
+                    <span class="card-tag">Expansão</span>
+                    <h1>Estoque filial</h1>
+                    <p>Área preparada para futuras rotinas entre unidades e setores.</p>
+                </div>
+
+                <div class="card-avisos card-avisos5 dashboard-card">
+                    <span class="card-tag">Estrutura</span>
+                    <h1>Nova unidade</h1>
+                    <p>Centralize novos processos, cadastros e acompanhamento operacional.</p>
+                </div>
+
+                <div class="card-avisos card-avisos4 dashboard-card dashboard-card-soft">
+                    <span class="card-tag">Equipe</span>
+                    <h1>Perfis</h1>
+                    <p>Área visual para contas, permissões e organização interna.</p>
+                </div>
+            </div>
+        </section>
     </main>
     </div>
 
@@ -461,6 +620,6 @@ function toggleMensagens() {
 
 
 
-    <script src="javascript13/script.js"></script>
+    <script src="javascript14/script.js"></script>
 </body>
 </html>
